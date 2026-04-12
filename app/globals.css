@@ -41,8 +41,22 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-outfit), sans-serif;
+}
+
+[id] {
+  scroll-margin-top: 6.5rem;
+}
+
 * {
   border-color: var(--line);
+  box-sizing: border-box;
 }
 
 *::selection {
@@ -52,4 +66,8 @@ body {
 :focus-visible {
   outline: none;
   box-shadow: 0 0 0 3px rgb(34 200 138 / 0.35);
+}
+
+summary::-webkit-details-marker {
+  display: none;
 }
