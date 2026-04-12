@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 
+import { AboutZetGroep } from "@/components/AboutZetGroep";
 import { Calculator } from "@/components/Calculator";
 import { Contact } from "@/components/Contact";
 import { Faq } from "@/components/Faq";
@@ -17,7 +18,7 @@ export default function HomePage() {
   const [prefilledPrice, setPrefilledPrice] = useState(38500);
 
   return (
-    <div className="min-h-screen bg-cream text-ink">
+    <div className="min-h-screen bg-paper text-ink">
       <Header />
       <main>
         <Hero />
@@ -26,6 +27,7 @@ export default function HomePage() {
         <Calculator onPriceChange={setPrefilledPrice} />
         <HowItWorks />
         <Pricing />
+        <AboutZetGroep />
         <Faq />
         <Contact prefilledPrice={prefilledPrice} />
       </main>
