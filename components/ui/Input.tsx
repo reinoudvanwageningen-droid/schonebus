@@ -1,7 +1,7 @@
 import type { InputHTMLAttributes } from "react";
 
 export const fieldClassName =
-  "w-full rounded-[14px] border border-line bg-white px-4 text-base text-ink outline-none transition-colors duration-200 placeholder:text-sub/70 focus:border-primary";
+  "w-full rounded-[14px] border border-line bg-paper px-4 text-base text-ink outline-none transition-colors duration-200 placeholder:text-mist/70 focus:border-electric";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
@@ -22,19 +22,19 @@ export function Input({
       <span className="mb-2 block text-sm font-medium text-ink">{label}</span>
       <span
         className={[
-          "flex h-12 items-center rounded-[14px] border border-line bg-white transition-colors duration-200 focus-within:border-primary",
+          "flex h-12 items-center rounded-[14px] border border-line bg-paper transition-colors duration-200 focus-within:border-electric",
           error ? "border-red-400" : "",
         ]
           .filter(Boolean)
           .join(" ")}
       >
         {prefix ? (
-          <span className="pl-4 pr-2 text-base font-medium text-sub">{prefix}</span>
+          <span className="pl-4 pr-2 text-base font-medium text-mist">{prefix}</span>
         ) : null}
         <input
           id={id}
           className={[
-            "h-full w-full rounded-[14px] bg-transparent px-4 text-base text-ink outline-none placeholder:text-sub/70",
+            "h-full w-full rounded-[14px] bg-transparent px-4 text-base text-ink outline-none placeholder:text-mist/70",
             prefix ? "pl-0" : "",
             className,
           ]

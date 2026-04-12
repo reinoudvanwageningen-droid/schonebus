@@ -122,7 +122,7 @@ export function Contact({ prefilledPrice }: ContactProps) {
     } catch {
       setStatus({
         type: "error",
-        message: "Verzenden lukt nu niet. Mail je aanvraag naar aanvraag@schonebus.nl.",
+        message: "Verzenden lukt nu niet. Mail je aanvraag naar aanvraag@zetgroep.nl.",
       });
     } finally {
       setIsSubmitting(false);
@@ -133,21 +133,29 @@ export function Contact({ prefilledPrice }: ContactProps) {
     <section id="contact" className="px-4 py-16 sm:px-6 sm:py-20">
       <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="lg:pr-8">
-          <h2 className="font-display text-[32px] font-bold leading-tight tracking-[-0.02em] text-forest sm:text-[38px]">
+          <h2 className="font-display text-[32px] font-bold leading-tight tracking-[-0.02em] text-midnight sm:text-[38px]">
             Contact
           </h2>
-          <p className="mt-5 max-w-md text-[17px] leading-8 text-sub">
+          <p className="mt-5 max-w-md text-[17px] leading-8 text-mist">
             Stuur je opdrachtbevestiging, of stel eerst een vraag. We reageren binnen
             één werkdag.
           </p>
 
           <div className="mt-8 space-y-3 text-base text-ink">
-            <p>{CONTACT_DETAILS.email}</p>
-            <p>{CONTACT_DETAILS.phone}</p>
+            <p>
+              <a className="transition-colors duration-200 hover:text-electric" href={`mailto:${CONTACT_DETAILS.email}`}>
+                {CONTACT_DETAILS.email}
+              </a>
+            </p>
+            <p>
+              <a className="transition-colors duration-200 hover:text-electric" href={`tel:${CONTACT_DETAILS.phone.replace(/\s+/g, "")}`}>
+                {CONTACT_DETAILS.phone}
+              </a>
+            </p>
           </div>
 
           {/* Later vervangen door echte fotografie. */}
-          <div className="relative mt-8 overflow-hidden rounded-[24px] border border-line bg-white p-3 shadow-soft">
+          <div className="relative mt-8 overflow-hidden rounded-[24px] border border-line bg-paper p-3 shadow-soft">
             <div className="relative aspect-[4/3] overflow-hidden rounded-[18px]">
               <Image
                 src={CLIPBOARD_IMAGE.src}
@@ -221,7 +229,7 @@ export function Contact({ prefilledPrice }: ContactProps) {
                 className={[
                   "rounded-[14px] border px-4 py-3 text-sm",
                   status.type === "success"
-                    ? "border-accent bg-mint-bg text-forest"
+                    ? "border-electric/20 bg-cloud text-midnight"
                     : "border-red-300 bg-red-50 text-red-700",
                 ]
                   .filter(Boolean)

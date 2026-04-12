@@ -56,13 +56,13 @@ export function Calculator({ onPriceChange }: CalculatorProps) {
   const incomeOptions = rechtsvorm === "ib" ? ibOptions : vpbOptions;
 
   return (
-    <section id="calculator" className="bg-mint-bg px-4 py-16 sm:px-6 sm:py-20">
+    <section id="calculator" className="bg-cloud px-4 py-16 sm:px-6 sm:py-20">
       <div className="mx-auto max-w-2xl">
         <div className="text-center">
-          <h2 className="font-display text-[32px] font-bold leading-tight tracking-[-0.02em] text-forest sm:text-[38px]">
+          <h2 className="font-display text-[32px] font-bold leading-tight tracking-[-0.02em] text-midnight sm:text-[38px]">
             Bereken je fiscale voordeel
           </h2>
-          <p className="mt-4 text-[17px] leading-8 text-sub sm:text-lg">
+          <p className="mt-4 text-[17px] leading-8 text-mist sm:text-lg">
             Vul de aanschafprijs van je elektrische bestelbus in. Je krijgt direct een
             indicatie van het bedrag dat je via MIA, Vamil en KIA terug kunt halen.
           </p>
@@ -94,8 +94,8 @@ export function Calculator({ onPriceChange }: CalculatorProps) {
                     className={[
                       "flex cursor-pointer items-center gap-3 rounded-[14px] border px-4 py-4 transition-colors duration-200",
                       rechtsvorm === option.value
-                        ? "border-primary bg-mint-bg"
-                        : "border-line bg-white",
+                        ? "border-electric bg-cloud"
+                        : "border-line bg-paper",
                     ]
                       .filter(Boolean)
                       .join(" ")}
@@ -106,7 +106,7 @@ export function Calculator({ onPriceChange }: CalculatorProps) {
                       value={option.value}
                       checked={rechtsvorm === option.value}
                       onChange={() => setRechtsvorm(option.value as Rechtsvorm)}
-                      className="h-4 w-4 border-line text-primary focus:ring-primary"
+                      className="h-4 w-4 border-line text-electric focus:ring-electric"
                     />
                     <span className="text-sm font-medium text-ink">{option.label}</span>
                   </label>
@@ -141,7 +141,7 @@ export function Calculator({ onPriceChange }: CalculatorProps) {
               <span className="mb-2 block text-sm font-medium text-ink">
                 Heb je dit jaar al andere investeringen gedaan?
               </span>
-              <div className="inline-flex rounded-full border border-line bg-white p-1">
+              <div className="inline-flex rounded-full border border-line bg-paper p-1">
                 {[
                   { value: false, label: "Nee" },
                   { value: true, label: "Ja" },
@@ -153,7 +153,7 @@ export function Calculator({ onPriceChange }: CalculatorProps) {
                     className={[
                       "rounded-full px-5 py-2.5 text-sm font-medium transition-colors duration-200",
                       andereInvesteringen === option.value
-                        ? "bg-primary text-white"
+                        ? "bg-electric text-paper"
                         : "text-ink",
                     ]
                       .filter(Boolean)
@@ -165,7 +165,7 @@ export function Calculator({ onPriceChange }: CalculatorProps) {
                 ))}
               </div>
               {andereInvesteringen ? (
-                <p className="mt-3 text-sm leading-6 text-sub">
+                <p className="mt-3 text-sm leading-6 text-mist">
                   KIA-uitkomst is indicatief als je dit jaar al andere investeringen hebt
                   gedaan.
                 </p>
@@ -174,28 +174,33 @@ export function Calculator({ onPriceChange }: CalculatorProps) {
           </div>
 
           <div
-            className="mt-8 rounded-[24px] border border-line bg-mint-bg/60 p-5 sm:p-6"
+            className="mt-8 rounded-[24px] border border-line bg-cloud p-5 sm:p-6"
             aria-live="polite"
           >
-            <p className="text-sm font-medium text-sub">Geschat fiscaal voordeel</p>
-            <p className="mt-2 font-display text-4xl font-bold text-forest">
-              {formatEuro(resultaat.totaal)}
-            </p>
+            <p className="text-sm font-medium text-mist">Geschat fiscaal voordeel</p>
+            <div className="mt-2 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
+              <p className="font-display text-4xl font-bold text-midnight">
+                {formatEuro(resultaat.totaal)}
+              </p>
+              <span className="inline-flex rounded-full bg-spark px-3 py-1 text-sm font-semibold text-midnight">
+                Totaal {formatEuro(resultaat.totaal)}
+              </span>
+            </div>
 
             <div className="mt-6 space-y-3 text-sm text-ink">
-              <p className="font-medium text-sub">Opbouw:</p>
+              <p className="font-medium text-mist">Opbouw:</p>
 
               <div className="grid grid-cols-[minmax(0,1fr)_auto] gap-x-4 gap-y-1">
                 <span>MIA-aftrek (27%)</span>
                 <span>{formatEuro(resultaat.miaAftrek)}</span>
-                <span className="text-sub">voordeel</span>
+                <span className="text-mist">voordeel</span>
                 <span>{formatEuro(resultaat.miaVoordeel)}</span>
               </div>
 
               <div className="grid grid-cols-[minmax(0,1fr)_auto] gap-x-4 gap-y-1">
                 <span>KIA-aftrek</span>
                 <span>{formatEuro(resultaat.kiaAftrek)}</span>
-                <span className="text-sub">voordeel</span>
+                <span className="text-mist">voordeel</span>
                 <span>{formatEuro(resultaat.kiaVoordeel)}</span>
               </div>
 
@@ -207,7 +212,7 @@ export function Calculator({ onPriceChange }: CalculatorProps) {
               </div>
             </div>
 
-            <p className="mt-5 text-sm leading-6 text-sub">
+            <p className="mt-5 text-sm leading-6 text-mist">
               + Vamil: je mag 75% van de investering willekeurig afschrijven. Dat
               geeft een cashflowvoordeel in het jaar van aanschaf.
             </p>
@@ -225,7 +230,7 @@ export function Calculator({ onPriceChange }: CalculatorProps) {
           </div>
         </Card>
 
-        <p className="mt-4 text-sm leading-6 text-sub">
+        <p className="mt-4 text-sm leading-6 text-mist">
           Dit is een indicatie op basis van de actuele MIA- en KIA-percentages. Het
           werkelijke voordeel hangt af van je belastbaar inkomen, eerdere investeringen
           en de definitieve beschikking van RVO. We rekenen exact voor je door in de

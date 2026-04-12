@@ -5,7 +5,7 @@ export function Pricing() {
   return (
     <section className="px-4 py-16 sm:px-6 sm:py-20">
       <div className="mx-auto max-w-6xl">
-        <h2 className="font-display text-[32px] font-bold leading-tight tracking-[-0.02em] text-forest sm:text-[38px]">
+        <h2 className="font-display text-[32px] font-bold leading-tight tracking-[-0.02em] text-midnight sm:text-[38px]">
           Tarieven
         </h2>
 
@@ -15,20 +15,20 @@ export function Pricing() {
               key={item.name}
               className={[
                 "p-7 sm:p-8",
-                item.featured ? "border-primary bg-mint-bg/50" : "",
+                item.featured ? "border-electric bg-cloud" : "",
               ]
                 .filter(Boolean)
                 .join(" ")}
             >
               {item.featured ? (
-                <span className="inline-flex rounded-full bg-accent px-3 py-1 text-xs font-semibold tracking-[0.08em] text-forest">
+                <span className="inline-flex rounded-full bg-spark px-3 py-1 text-xs font-semibold tracking-[0.08em] text-midnight">
                   Meest gekozen
                 </span>
               ) : null}
-              <h3 className="mt-4 font-display text-2xl font-semibold text-forest">
+              <h3 className="mt-4 font-display text-2xl font-semibold text-midnight">
                 {item.name}
               </h3>
-              <p className="mt-3 text-[17px] leading-8 text-sub">{item.body}</p>
+              <p className="mt-3 text-[17px] leading-8 text-mist">{item.body}</p>
             </Card>
           ))}
         </div>

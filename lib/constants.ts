@@ -1,13 +1,13 @@
 export const SITE_COLORS = {
-  forest: "#0F3D35",
-  primary: "#1B6B5A",
-  accent: "#22C88A",
-  mintBg: "#E8F7F0",
-  ink: "#0B1F1A",
-  sub: "#4A5C57",
-  white: "#FFFFFF",
-  cream: "#FAFBF9",
-  line: "#E2EBE7",
+  midnight: "#0A1B3D",
+  electric: "#1E5FD8",
+  sky: "#6FB8FF",
+  spark: "#F5D547",
+  cloud: "#F4F7FB",
+  paper: "#FFFFFF",
+  ink: "#0A1B3D",
+  mist: "#5A6B85",
+  line: "#D9E2EE",
 } as const;
 
 export const NAV_ITEMS = [
@@ -41,7 +41,7 @@ export const WHAT_WE_DO_ITEMS = [
 export const HOW_IT_WORKS_ITEMS = [
   {
     title: "Opdrachtbevestiging opsturen",
-    body: "Mail je koopovereenkomst of opdrachtbevestiging naar aanvraag@schonebus.nl.",
+    body: "Mail je koopovereenkomst of opdrachtbevestiging naar aanvraag@zetgroep.nl.",
   },
   {
     title: "Wij rekenen door",
@@ -97,12 +97,12 @@ export const FAQ_ITEMS = [
   {
     question: "Geldt dit ook voor tweedehands e-bussen?",
     answer:
-      "MIA geldt alleen voor nieuwe bedrijfsmiddelen. Voor gebruikte bussen kijken we per geval.",
+      "MIA geldt alleen voor nieuwe bedrijfsmiddelen. Voor gebruikte bussen kijkt ZET Groep per geval.",
   },
   {
     question: "Werkt mijn boekhouder mee?",
     answer:
-      "Ja. We leveren alles aan zoals je boekhouder het in de aangifte kan verwerken.",
+      "Ja. ZET Groep levert alles aan zoals je boekhouder het in de aangifte kan verwerken.",
   },
   {
     question: "Hoe zit het met wegenbelasting?",
@@ -117,7 +117,7 @@ export const HERO_IMAGE = {
 } as const;
 
 export const CABLE_IMAGE = {
-  src: "https://images.unsplash.com/photo-1593941707882-a56bbc8df2b1?auto=format&fit=crop&w=1200&q=80",
+  src: "https://images.unsplash.com/photo-1745995839816-a2de7fb2fd2d?auto=format&fit=crop&w=1200&q=80",
   alt: "Oplaadkabel van een elektrische bestelbus bij een laadpunt",
 } as const;
 
@@ -127,6 +127,47 @@ export const CLIPBOARD_IMAGE = {
 } as const;
 
 export const CONTACT_DETAILS = {
-  email: "aanvraag@schonebus.nl",
-  phone: "06 — nog invullen",
+  email: "aanvraag@zetgroep.nl",
+  phone: "06 24 89 69 20",
+} as const;
+
+export const ZET_GROEP_URL = "https://zetgroep.nl";
+
+export const ZET_GROEP_TEXT = {
+  headerSubline: "onderdeel van ZET Groep",
+  footerBody:
+    "schonebus.nl is een initiatief van ZET Groep — specialist in subsidies en advies voor elektrisch transport.",
+} as const;
+
+export const ZET_GROEP_STATS = [
+  {
+    value: "300+",
+    label: "succesvolle subsidieaanvragen",
+  },
+  {
+    value: "€25.000",
+    label: "gemiddeld belastingvoordeel per aanvraag",
+  },
+  {
+    value: "€7,5 miljoen",
+    label: "bespaard voor klanten",
+  },
+] as const;
+
+export const ZET_GROEP_CONTACTS = [
+  {
+    name: "Mathijs Vrijbloed",
+    role: "subsidiespecialist",
+  },
+  {
+    name: "Erik van der Eng",
+    role: "expert elektrische voertuigen",
+  },
+] as const;
+
+export const ZET_GROEP_CARD = {
+  company: "ZET Groep",
+  addressLines: ["Mollerusweg 62", "2031 BZ Haarlem"],
+  email: "aanvraag@zetgroep.nl",
+  phone: "06 24 89 69 20",
 } as const;

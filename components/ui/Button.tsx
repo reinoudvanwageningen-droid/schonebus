@@ -1,6 +1,6 @@
 import type { ButtonHTMLAttributes } from "react";
 
-type ButtonVariant = "primary" | "secondary" | "ghost";
+type ButtonVariant = "primary" | "secondary" | "ghost" | "outline";
 
 type ButtonSize = "md" | "lg";
 
@@ -13,10 +13,12 @@ interface ButtonClassOptions {
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "bg-linear-to-r from-primary to-accent text-white shadow-soft hover:brightness-105",
+    "bg-linear-to-r from-electric to-sky text-paper shadow-soft hover:brightness-105",
   secondary:
-    "border border-line bg-white text-forest hover:border-primary hover:text-primary",
-  ghost: "text-forest hover:text-primary",
+    "border border-line bg-paper text-midnight hover:border-electric hover:text-electric",
+  ghost: "text-midnight hover:text-electric",
+  outline:
+    "border-2 border-electric bg-paper text-electric hover:bg-electric hover:text-paper",
 };
 
 const sizeClasses: Record<ButtonSize, string> = {

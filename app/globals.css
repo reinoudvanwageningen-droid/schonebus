@@ -1,32 +1,32 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-forest: var(--forest);
-  --color-primary: var(--primary);
-  --color-accent: var(--accent);
-  --color-mint-bg: var(--mint-bg);
+  --color-midnight: var(--midnight);
+  --color-electric: var(--electric);
+  --color-sky: var(--sky);
+  --color-spark: var(--spark);
+  --color-cloud: var(--cloud);
+  --color-paper: var(--paper);
   --color-ink: var(--ink);
-  --color-sub: var(--sub);
-  --color-white: var(--white);
-  --color-cream: var(--cream);
+  --color-mist: var(--mist);
   --color-line: var(--line);
   --font-sans: var(--font-inter);
   --font-display: var(--font-outfit);
-  --shadow-soft: 0 20px 45px -18px rgb(15 61 53 / 0.18);
+  --shadow-soft: 0 24px 48px -24px rgb(10 27 61 / 0.18);
   --radius-card: 1rem;
   --radius-button: 0.625rem;
 }
 
 :root {
-  --forest: #0f3d35;
-  --primary: #1b6b5a;
-  --accent: #22c88a;
-  --mint-bg: #e8f7f0;
-  --ink: #0b1f1a;
-  --sub: #4a5c57;
-  --white: #ffffff;
-  --cream: #fafbf9;
-  --line: #e2ebe7;
+  --midnight: #0a1b3d;
+  --electric: #1e5fd8;
+  --sky: #6fb8ff;
+  --spark: #f5d547;
+  --cloud: #f4f7fb;
+  --paper: #ffffff;
+  --ink: #0a1b3d;
+  --mist: #5a6b85;
+  --line: #d9e2ee;
 }
 
 html {
@@ -35,7 +35,7 @@ html {
 
 body {
   min-height: 100vh;
-  background: var(--cream);
+  background: var(--paper);
   color: var(--ink);
   font-family: var(--font-inter), sans-serif;
   text-rendering: optimizeLegibility;
@@ -60,12 +60,12 @@ h6 {
 }
 
 *::selection {
-  background: rgb(34 200 138 / 0.2);
+  background: rgb(111 184 255 / 0.3);
 }
 
 :focus-visible {
   outline: none;
-  box-shadow: 0 0 0 3px rgb(34 200 138 / 0.35);
+  box-shadow: 0 0 0 3px rgb(30 95 216 / 0.35);
 }
 
 summary::-webkit-details-marker {
