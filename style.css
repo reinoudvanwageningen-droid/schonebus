@@ -665,19 +665,6 @@ summary::-webkit-details-marker { display: none; }
   .about__grid { grid-template-columns: 1.1fr 0.9fr; align-items: start; }
 }
 
-.about__stats { margin-top: 1rem; display: grid; gap: 0.75rem; }
-@media (min-width: 640px) { .about__stats { grid-template-columns: repeat(3, 1fr); } }
-
-.about__stat {
-  border-radius: 1rem;
-  border: 1px solid var(--line);
-  background: var(--paper);
-  padding: 1rem;
-  box-shadow: var(--shadow-soft);
-}
-.about__stat-value { font-family: 'Schonebus Display', Arial, sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--midnight); }
-.about__stat-label { margin-top: 0.5rem; font-size: 0.875rem; line-height: 1.5; color: var(--mist); }
-
 .about__card { border-radius: 1rem; border: 1px solid var(--line); background: var(--paper); padding: 2rem; box-shadow: var(--shadow-soft); }
 .about__card-address { margin-top: 1.25rem; line-height: 1.75; color: var(--ink); }
 .about__card-links { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; }
@@ -932,7 +919,6 @@ details[open] .faq__chevron { transform: rotate(180deg); }
   .section-heading,
   .section-subheading,
   .result__total,
-  .about__stat-value,
   .faq__summary,
   .team-card__name {
     color: var(--ink);
