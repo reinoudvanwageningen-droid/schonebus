@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0A1B3D">
+  <title>schonebus.nl — fiscaal voordeel op je elektrische bestelbus</title>
+  <meta name="description" content="Bereken in 30 seconden wat je terugkrijgt via MIA, Vamil en KIA op je nieuwe elektrische bestelbus. No cure, no pay.">
+  <meta property="og:title" content="schonebus.nl — fiscaal voordeel op je elektrische bestelbus">
+  <meta property="og:description" content="Bereken in 30 seconden wat je terugkrijgt via MIA, Vamil en KIA op je nieuwe elektrische bestelbus. No cure, no pay.">
+  <meta property="og:image" content="og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ════ Header ════ -->
+<header class="header" id="site-header">
+  <div class="header__inner">
+    <a href="#top" class="header__logo">
+      <span class="header__logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m13 2-2 9h7l-8 11 2-9H5l8-11z"/></svg>
+      </span>
+      <span class="header__logo-text">
+        <span class="header__logo-name">schonebus.nl</span>
+        <span class="header__logo-sub">onderdeel van ZET Groep</span>
+      </span>
+    </a>
+
+    <nav class="header__nav">
+      <a href="#hoe-het-werkt" class="header__nav-link">Hoe het werkt</a>
+      <a href="#calculator" class="header__nav-link">Calculator</a>
+      <a href="#veelgestelde-vragen" class="header__nav-link">Veelgestelde vragen</a>
+      <a href="#contact" class="header__nav-link">Contact</a>
+      <a href="#contact" class="btn btn--primary btn--md">Start aanvraag</a>
+    </nav>
+
+    <button type="button" class="header__burger" id="burger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+      <svg id="burger-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      <svg id="burger-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:none"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <nav class="mobile-menu__inner">
+      <a href="#hoe-het-werkt" class="mobile-menu__link">Hoe het werkt</a>
+      <a href="#calculator" class="mobile-menu__link">Calculator</a>
+      <a href="#veelgestelde-vragen" class="mobile-menu__link">Veelgestelde vragen</a>
+      <a href="#contact" class="mobile-menu__link">Contact</a>
+      <a href="#contact" class="btn btn--primary btn--lg btn--full">Start aanvraag</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ════ Hero ════ -->
+<section id="top" class="hero">
+  <div class="hero__blobs">
+    <svg class="hero__blob hero__blob--1" viewBox="0 0 200 200" fill="currentColor" aria-hidden="true">
+      <path d="M40.2,-48C53.7,-36.2,67.5,-25.5,72.8,-11.8C78.1,1.9,74.8,18.6,66.1,31C57.4,43.4,43.4,51.4,28.4,58.2C13.4,65,-2.7,70.5,-18.5,68.3C-34.2,66,-49.5,56,-61.3,42.5C-73.1,29,-81.5,12,-79.2,-3.9C-76.9,-19.7,-63.9,-34.4,-49.3,-46C-34.8,-57.6,-17.4,-66.1,-2,-63.7C13.5,-61.3,27,-47.9,40.2,-48Z"/>
+    </svg>
+    <svg class="hero__blob hero__blob--2" viewBox="0 0 200 200" fill="currentColor" aria-hidden="true">
+      <path d="M54.8,-56.9C68.2,-41.4,74.6,-20.7,74.7,0.2C74.9,21.1,68.8,42.2,55.4,53.6C42,65,21,66.6,0.6,66C-19.8,65.5,-39.6,62.9,-52.8,51.5C-66,40.1,-72.5,20.1,-73,-0.5C-73.4,-21.1,-67.7,-42.2,-54.4,-57.7C-41.1,-73.2,-20.6,-83.2,0.1,-83.3C20.7,-83.4,41.4,-72.4,54.8,-56.9Z"/>
+    </svg>
+  </div>
+
+  <div class="hero__grid">
+    <div class="hero__content">
+      <h1 class="hero__title">Elektrische bestelbus gekocht? Haal je fiscale voordeel terug.</h1>
+      <p class="hero__text">Met MIA, Vamil en KIA loopt het voordeel op je e-bus al snel op tot €5.000. Wij regelen de aanvraag van begin tot eind. Lukt het niet, dan betaal je niets.</p>
+
+      <div class="hero__actions">
+        <a href="#calculator" class="btn btn--primary btn--lg">Bereken mijn voordeel</a>
+        <a href="#hoe-het-werkt" class="btn btn--secondary btn--lg">Hoe het werkt</a>
+      </div>
+
+      <ul class="hero__trust">
+        <li class="hero__trust-item">
+          <svg class="hero__trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span>No cure, no pay</span>
+        </li>
+        <li class="hero__trust-item">
+          <svg class="hero__trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span>Aanvraag binnen 24 uur in behandeling</span>
+        </li>
+        <li class="hero__trust-item">
+          <svg class="hero__trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span>Werkt samen met je eigen boekhouder</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="hero__image-wrapper">
+      <div class="hero__image-frame">
+        <div class="hero__image-inner">
+          <img src="https://images.unsplash.com/photo-1517520287167-4bbf64a00d66?auto=format&fit=crop&w=1200&q=80" alt="Witte elektrische bestelbus op een lichte bedrijfslocatie" loading="eager">
+        </div>
+      </div>
+      <div class="hero__floating-card">
+        <p class="hero__floating-label">Geschat voordeel</p>
+        <p class="hero__floating-value">€ 4.820</p>
+        <p class="hero__floating-sub">op een bus van € 38.500</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ Urgency Bar ════ -->
+<section class="urgency">
+  <div class="urgency__inner">
+    Koop je dit jaar een e-bestelbus? De aanvraag moet binnen <span class="urgency__highlight">3 maanden</span> na de opdrachtbevestiging binnen zijn. Wacht niet tot je boekhouder eraan denkt.
+  </div>
+</section>
+
+<!-- ════ What We Do ════ -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-heading" style="max-width:672px">Wij regelen de papieren. Jij rijdt schoon.</h2>
+
+    <div class="whatwedo__grid">
+      <div class="card whatwedo__card">
+        <div class="whatwedo__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m3 15 2 2 4-4"/></svg>
+        </div>
+        <h3 class="section-subheading mt-5">We checken je aanvraag</h3>
+        <p class="section-text mt-3">Stuur je opdrachtbevestiging op. Wij controleren binnen 24 uur of je in aanmerking komt en welke regelingen het meest opleveren.</p>
+      </div>
+
+      <div class="card whatwedo__card">
+        <div class="whatwedo__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg>
+        </div>
+        <h3 class="section-subheading mt-5">We dienen alles in</h3>
+        <p class="section-text mt-3">MIA, Vamil, KIA — wij vullen de formulieren in en dienen ze in bij RVO. Jij hoeft niks te doen.</p>
+      </div>
+
+      <div class="card whatwedo__card">
+        <div class="whatwedo__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2h4"/><path d="M12 14v-4"/><path d="M4 13a8 8 0 0 1 8-7 8 8 0 1 1-5.3 14L4 17.6"/><path d="M9 17H4v5"/></svg>
+        </div>
+        <h3 class="section-subheading mt-5">We bewaken de deadlines</h3>
+        <p class="section-text mt-3">De meldingstermijn is 3 maanden na de koopovereenkomst. Wij zorgen dat je die niet mist.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ Calculator ════ -->
+<section id="calculator" class="section calculator">
+  <div class="container container--sm">
+    <div class="text-center">
+      <h2 class="section-heading">Bereken je fiscale voordeel</h2>
+      <p class="section-text mt-4">Vul de aanschafprijs van je elektrische bestelbus in. Je krijgt direct een indicatie van het bedrag dat je via MIA, Vamil en KIA terug kunt halen.</p>
+    </div>
+
+    <div class="card calculator__card">
+      <div class="calculator__fields">
+
+        <label>
+          <span class="field__label">Aanschafprijs e-bestelbus (excl. btw)</span>
+          <span class="field__input-wrap">
+            <span class="field__prefix">€</span>
+            <input class="field__input field__input--has-prefix" type="number" id="aanschafprijs" min="10000" max="150000" step="500" value="38500">
+          </span>
+        </label>
+
+        <fieldset style="border:none">
+          <legend class="field__label">Rechtsvorm</legend>
+          <div class="radio-group">
+            <label class="radio-option radio-option--active">
+              <input type="radio" name="rechtsvorm" value="ib" checked>
+              <span>Eenmanszaak / VOF (IB)</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="rechtsvorm" value="vpb">
+              <span>BV (vpb)</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <label>
+          <span class="field__label">Belastbaar inkomen / winst per jaar</span>
+          <div id="ib-options">
+            <select class="field__select" id="ib-select">
+              <option value="laag">tot €38.441</option>
+              <option value="midden" selected>€38.441 – €76.817</option>
+              <option value="hoog">boven €76.817</option>
+            </select>
+          </div>
+          <div id="vpb-options" style="display:none">
+            <select class="field__select" id="vpb-select">
+              <option value="laag" selected>tot €200.000</option>
+              <option value="hoog">boven €200.000</option>
+            </select>
+          </div>
+        </label>
+
+        <div>
+          <span class="field__label">Heb je dit jaar al andere investeringen gedaan?</span>
+          <div class="toggle-group">
+            <button type="button" class="toggle-btn toggle-btn--active" data-value="false" aria-pressed="true">Nee</button>
+            <button type="button" class="toggle-btn" data-value="true" aria-pressed="false">Ja</button>
+          </div>
+          <p class="toggle-note" id="toggle-note" style="display:none">KIA-uitkomst is indicatief als je dit jaar al andere investeringen hebt gedaan.</p>
+        </div>
+      </div>
+
+      <div class="result" aria-live="polite">
+        <p class="result__label">Geschat fiscaal voordeel</p>
+        <div class="result__header">
+          <p class="result__total" id="result-total">€ 0</p>
+          <span class="result__badge" id="result-badge">Totaal € 0</span>
+        </div>
+
+        <div class="result__breakdown">
+          <p class="result__breakdown-title">Opbouw:</p>
+
+          <div class="result__row">
+            <span>MIA-aftrek (27%)</span>
+            <span id="result-mia-aftrek">€ 0</span>
+          </div>
+          <div class="result__row result__row--sub">
+            <span>voordeel</span>
+            <span id="result-mia-voordeel">€ 0</span>
+          </div>
+
+          <div class="result__row mt-3">
+            <span>KIA-aftrek</span>
+            <span id="result-kia-aftrek">€ 0</span>
+          </div>
+          <div class="result__row result__row--sub">
+            <span>voordeel</span>
+            <span id="result-kia-voordeel">€ 0</span>
+          </div>
+
+          <div class="result__divider">
+            <div class="result__row result__row--total">
+              <span>Totaal voordeel</span>
+              <span id="result-totaal">€ 0</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="result__vamil">+ Vamil: je mag 75% van de investering willekeurig afschrijven. Dat geeft een cashflowvoordeel in het jaar van aanschaf.</p>
+
+        <button type="button" class="btn btn--primary btn--lg result__cta" id="calc-cta">Aanvraag starten</button>
+      </div>
+    </div>
+
+    <p class="calculator__disclaimer">Dit is een indicatie op basis van de actuele MIA- en KIA-percentages. Het werkelijke voordeel hangt af van je belastbaar inkomen, eerdere investeringen en de definitieve beschikking van RVO. We rekenen exact voor je door in de offerte.</p>
+  </div>
+</section>
+
+<!-- ════ How It Works ════ -->
+<section id="hoe-het-werkt" class="section">
+  <div class="container">
+    <div class="howitworks__top">
+      <div>
+        <h2 class="section-heading">Hoe het werkt</h2>
+      </div>
+      <div class="howitworks__image-frame">
+        <div class="howitworks__image-inner">
+          <img src="https://images.unsplash.com/photo-1745995839816-a2de7fb2fd2d?auto=format&fit=crop&w=1200&q=80" alt="Oplaadkabel van een elektrische bestelbus bij een laadpunt" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <ol class="howitworks__steps">
+      <li><div class="card howitworks__step">
+        <div class="howitworks__step-num">1</div>
+        <h3 class="section-subheading mt-5">Opdrachtbevestiging opsturen</h3>
+        <p class="section-text mt-3">Mail je koopovereenkomst of opdrachtbevestiging naar aanvraag@zetgroep.nl.</p>
+      </div></li>
+      <li><div class="card howitworks__step">
+        <div class="howitworks__step-num">2</div>
+        <h3 class="section-subheading mt-5">Wij rekenen door</h3>
+        <p class="section-text mt-3">Binnen 24 uur weet je welke regelingen je oplevert wat.</p>
+      </div></li>
+      <li><div class="card howitworks__step">
+        <div class="howitworks__step-num">3</div>
+        <h3 class="section-subheading mt-5">Aanvraag bij RVO</h3>
+        <p class="section-text mt-3">Wij vullen alles in en dienen het in. Jij ondertekent één formulier.</p>
+      </div></li>
+      <li><div class="card howitworks__step">
+        <div class="howitworks__step-num">4</div>
+        <h3 class="section-subheading mt-5">Voordeel verrekend</h3>
+        <p class="section-text mt-3">Je verwerkt de aftrek in je belastingaangifte. Lukt de aanvraag niet, dan betaal je niets.</p>
+      </div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ════ Pricing ════ -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-heading">Tarieven</h2>
+
+    <div class="pricing__grid">
+      <div class="card pricing__card">
+        <h3 class="section-subheading mt-4">schonebus.nl Basis</h3>
+        <p class="section-text mt-3">8% van de aftrekpost. Geen aftrek, geen kosten.</p>
+      </div>
+
+      <div class="card pricing__card pricing__card--featured">
+        <span class="pricing__badge">Meest gekozen</span>
+        <h3 class="section-subheading mt-4">schonebus.nl Compleet</h3>
+        <p class="section-text mt-3">10% van de aftrekpost. Inclusief begeleiding bij MIA én KIA én EIA op losse onderdelen (batterijpakket, koeling, lichtgewicht laadbak).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ About ZET Groep ════ -->
+<section class="section about">
+  <div class="container">
+    <div class="about__grid">
+      <div>
+        <h2 class="section-heading">Achter schonebus.nl staat ZET Groep</h2>
+        <p class="section-text mt-5">ZET Groep begeleidt sinds 2019 ondernemers bij de overstap naar elektrisch transport. Erik van der Eng en Mathijs Vrijbloed combineren technische kennis van elektrische voertuigen met financiële expertise op het gebied van subsidies en fiscale regelingen.</p>
+        <p class="section-text mt-5">Schonebus.nl is de ingang voor zzp'ers en kleine bedrijven met één of enkele elektrische bestelbussen. Voor vrachtwagens, laadinfra en wagenparkvraagstukken werkt ZET Groep rechtstreeks met opdrachtgevers via zetgroep.nl.</p>
+
+        <p class="text-sm-mist mt-6">Resultaat tot nu toe:</p>
+
+        <div class="about__stats mt-4">
+          <div class="about__stat">
+            <p class="about__stat-value">300+</p>
+            <p class="about__stat-label">succesvolle subsidieaanvragen</p>
+          </div>
+          <div class="about__stat">
+            <p class="about__stat-value">€25.000</p>
+            <p class="about__stat-label">gemiddeld belastingvoordeel per aanvraag</p>
+          </div>
+          <div class="about__stat">
+            <p class="about__stat-value">€7,5 miljoen</p>
+            <p class="about__stat-label">bespaard voor klanten</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about__card">
+        <h3 class="section-subheading">ZET Groep</h3>
+        <div class="about__card-address">
+          <p>Mollerusweg 62</p>
+          <p>2031 BZ Haarlem</p>
+        </div>
+        <div class="about__card-links">
+          <a class="about__card-link" href="mailto:aanvraag@zetgroep.nl">aanvraag@zetgroep.nl</a>
+          <a class="about__card-link" href="tel:0624896920">06 24 89 69 20</a>
+        </div>
+        <p class="about__contacts-title">Contactpersonen</p>
+        <div class="about__contacts-list">
+          <p><strong>Mathijs Vrijbloed</strong> — subsidiespecialist</p>
+          <p><strong>Erik van der Eng</strong> — expert elektrische voertuigen</p>
+        </div>
+        <a class="btn btn--outline btn--lg mt-8" href="https://zetgroep.nl" target="_blank" rel="noopener">Bezoek zetgroep.nl →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ FAQ ════ -->
+<section id="veelgestelde-vragen" class="section">
+  <div class="container container--md">
+    <h2 class="section-heading">Veelgestelde vragen</h2>
+
+    <div class="faq__list">
+      <details class="faq__item">
+        <summary class="faq__summary">
+          <span>Wat kost het als de aanvraag niet lukt?</span>
+          <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <p class="faq__answer">Niets. We werken no cure, no pay.</p>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__summary">
+          <span>Welke termijn moet ik halen?</span>
+          <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <p class="faq__answer">De aanvraag moet binnen 3 maanden na de datum van je opdrachtbevestiging binnen zijn bij RVO.</p>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__summary">
+          <span>Bestaat de SEBA-subsidie nog?</span>
+          <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <p class="faq__answer">Nee. SEBA is per 31 december 2024 gesloten. We werken nu met MIA, Vamil, KIA en EIA op onderdelen.</p>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__summary">
+          <span>Wat is het verschil tussen MIA en EIA voor mijn bus?</span>
+          <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <p class="faq__answer">MIA gaat over de bus zelf (code E 3101). EIA gaat over specifieke energiebesparende onderdelen, bijvoorbeeld het batterijpakket of een elektrische koeling.</p>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__summary">
+          <span>Kan ik MIA en KIA combineren?</span>
+          <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <p class="faq__answer">Ja. Beide regelingen mogen naast elkaar.</p>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__summary">
+          <span>Geldt dit ook voor tweedehands e-bussen?</span>
+          <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <p class="faq__answer">MIA geldt alleen voor nieuwe bedrijfsmiddelen. Voor gebruikte bussen kijkt ZET Groep per geval.</p>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__summary">
+          <span>Werkt mijn boekhouder mee?</span>
+          <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <p class="faq__answer">Ja. ZET Groep levert alles aan zoals je boekhouder het in de aangifte kan verwerken.</p>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__summary">
+          <span>Hoe zit het met wegenbelasting?</span>
+          <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <p class="faq__answer">De volledige vrijstelling voor elektrische bestelbussen is in 2026 vervallen. Je betaalt nu het normale tarief.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ════ Contact ════ -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="contact__grid">
+      <div>
+        <h2 class="section-heading">Contact</h2>
+        <p class="section-text mt-5" style="max-width:28rem">Stuur je opdrachtbevestiging, of stel eerst een vraag. We reageren binnen één werkdag.</p>
+
+        <div class="contact__links">
+          <a class="contact__link" href="mailto:aanvraag@zetgroep.nl">aanvraag@zetgroep.nl</a>
+          <a class="contact__link" href="tel:0624896920">06 24 89 69 20</a>
+        </div>
+
+        <div class="contact__image-frame">
+          <div class="contact__image-inner">
+            <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=80" alt="Ondernemer met een klembord naast een bedrijfswagen" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <div class="card contact__form-card">
+        <form class="contact__form" id="contact-form" novalidate>
+          <label>
+            <span class="field__label">Naam</span>
+            <span class="field__input-wrap">
+              <input class="field__input" type="text" id="naam" autocomplete="name">
+            </span>
+            <span class="field__error" id="error-naam"></span>
+          </label>
+
+          <label>
+            <span class="field__label">Bedrijfsnaam</span>
+            <span class="field__input-wrap">
+              <input class="field__input" type="text" id="bedrijfsnaam" autocomplete="organization">
+            </span>
+            <span class="field__error" id="error-bedrijfsnaam"></span>
+          </label>
+
+          <label>
+            <span class="field__label">E-mail</span>
+            <span class="field__input-wrap">
+              <input class="field__input" type="email" id="email" autocomplete="email">
+            </span>
+            <span class="field__error" id="error-email"></span>
+          </label>
+
+          <label>
+            <span class="field__label">Telefoon (optioneel)</span>
+            <span class="field__input-wrap">
+              <input class="field__input" type="tel" id="telefoon" autocomplete="tel">
+            </span>
+          </label>
+
+          <label>
+            <span class="field__label">Aanschafprijs bus</span>
+            <span class="field__input-wrap">
+              <input class="field__input" type="text" id="aanschafprijs-bus">
+            </span>
+          </label>
+
+          <label>
+            <span class="field__label">Bericht</span>
+            <textarea class="contact__textarea" id="bericht"></textarea>
+          </label>
+
+          <button type="submit" class="btn btn--primary btn--lg">Aanvraag verzenden</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ════ Footer ════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand">
+          <span class="footer__brand-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m13 2-2 9h7l-8 11 2-9H5l8-11z"/></svg>
+          </span>
+          <span class="footer__brand-name">schonebus.nl</span>
+        </div>
+        <p class="footer__body">schonebus.nl is een initiatief van ZET Groep — specialist in subsidies en advies voor elektrisch transport.</p>
+        <a class="footer__ext-link" href="https://zetgroep.nl" target="_blank" rel="noopener">Bezoek zetgroep.nl</a>
+      </div>
+
+      <div>
+        <h3 class="footer__heading">Links</h3>
+        <ul class="footer__list">
+          <li><a href="#hoe-het-werkt">Hoe het werkt</a></li>
+          <li><a href="#calculator">Calculator</a></li>
+          <li><a href="#veelgestelde-vragen">Veelgestelde vragen</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer__heading">Juridisch</h3>
+        <ul class="footer__list">
+          <li>ZET Groep — Haarlem</li>
+          <li>KvK op aanvraag</li>
+          <li>Privacy</li>
+          <li>Algemene voorwaarden</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">© 2026 schonebus.nl</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

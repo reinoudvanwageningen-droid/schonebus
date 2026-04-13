@@ -1,8 +1,2 @@
-.next
-out
-node_modules
-coverage
-dist
 .DS_Store
-*.log
 .vscode
