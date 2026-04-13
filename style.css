@@ -595,25 +595,26 @@ summary::-webkit-details-marker { display: none; }
 
 /* ── How It Works ── */
 
-.howitworks__top { display: grid; gap: 2rem; }
-@media (min-width: 1024px) {
-  .howitworks__top { grid-template-columns: 1fr 360px; align-items: end; }
-}
-.howitworks__image-frame {
+.howitworks-bg {
   position: relative;
-  overflow: hidden;
-  border-radius: 24px;
-  border: 1px solid var(--line);
-  background: var(--paper);
-  padding: 0.75rem;
-  box-shadow: var(--shadow-soft);
+  background: var(--midnight) url('assets/bestelbus-koplamp.webp') center / cover no-repeat;
 }
-.howitworks__image-inner {
-  overflow: hidden;
-  border-radius: 18px;
-  aspect-ratio: 16/10;
+.howitworks-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(10,27,61,0.85), rgba(10,27,61,0.72));
+  pointer-events: none;
 }
-.howitworks__image-inner img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.howitworks-bg > * { position: relative; z-index: 1; }
+
+.howitworks-wave { display: block; width: 100%; height: 48px; }
+@media (min-width: 640px) { .howitworks-wave { height: 72px; } }
+@media (min-width: 1024px) { .howitworks-wave { height: 96px; } }
+.howitworks-wave--top { fill: var(--cloud); margin-bottom: -1px; }
+.howitworks-wave--bottom { fill: var(--paper); margin-top: -1px; }
+
+.howitworks-bg .section-heading { color: #ffffff; }
 
 .howitworks__steps {
   margin-top: 2.5rem;
