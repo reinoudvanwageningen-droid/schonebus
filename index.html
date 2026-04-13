@@ -407,12 +407,12 @@
       <div class="howitworks__image-frame">
         <div class="howitworks__image-inner">
           <img
-            src="assets/erik-mathijs-hero-360.jpg"
-            srcset="assets/erik-mathijs-hero-360.jpg 360w, assets/erik-mathijs-hero-600.jpg 600w"
+            src="assets/bestelbus-koplamp-360.jpg"
+            srcset="assets/bestelbus-koplamp-360.jpg 360w, assets/bestelbus-koplamp-720.jpg 720w, assets/bestelbus-koplamp.webp 1200w"
             sizes="(max-width: 1023px) calc(100vw - 3rem), 360px"
-            width="600"
-            height="900"
-            alt="Mathijs Vrijbloed en Erik van der Eng van ZET Groep"
+            width="1200"
+            height="800"
+            alt="Koplamp van een elektrische bestelbus van ZET Groep"
             loading="lazy"
             decoding="async"
           >
@@ -446,21 +446,29 @@
 </section>
 
 <!-- ════ Pricing ════ -->
-<section class="section">
+<section id="tarieven" class="section">
   <div class="container">
-    <h2 class="section-heading">Tarieven</h2>
+    <div class="pricing__intro">
+      <div>
+        <h2 class="section-heading">Tarieven</h2>
+        <p class="section-text mt-4">Klik op een pakket voor meer uitleg over wat erbij zit en welk traject het beste past bij jouw elektrische bestelbus.</p>
+      </div>
+      <a href="tarieven.html" class="btn btn--secondary btn--md">Bekijk alle tarieven</a>
+    </div>
 
     <div class="pricing__grid">
-      <div class="card pricing__card">
-        <h3 class="section-subheading mt-4">schonebus.nl Basis</h3>
-        <p class="section-text mt-3">8% van de aftrekpost. Geen aftrek, geen kosten.</p>
-      </div>
+      <a class="card pricing__card pricing__card-link" href="tarieven.html#basis">
+        <h3 class="section-subheading">schonebus.nl Basis</h3>
+        <p class="section-text">8% van de aftrekpost. Geen aftrek, geen kosten.</p>
+        <span class="pricing__card-cta">Meer over Basis</span>
+      </a>
 
-      <div class="card pricing__card pricing__card--featured">
+      <a class="card pricing__card pricing__card-link pricing__card--featured" href="tarieven.html#compleet">
         <span class="pricing__badge">Meest gekozen</span>
-        <h3 class="section-subheading mt-4">schonebus.nl Compleet</h3>
-        <p class="section-text mt-3">10% van de aftrekpost. Inclusief begeleiding bij MIA én KIA én EIA op losse onderdelen (batterijpakket, koeling, lichtgewicht laadbak).</p>
-      </div>
+        <h3 class="section-subheading">schonebus.nl Compleet</h3>
+        <p class="section-text">10% van de aftrekpost. Inclusief begeleiding bij MIA én KIA én EIA op losse onderdelen zoals batterijpakket, koeling en lichtgewicht laadbak.</p>
+        <span class="pricing__card-cta">Meer over Compleet</span>
+      </a>
     </div>
   </div>
 </section>
@@ -725,6 +733,7 @@
         <ul class="footer__list">
           <li><a href="#hoe-het-werkt">Hoe het werkt</a></li>
           <li><a href="#calculator">Calculator</a></li>
+          <li><a href="tarieven.html">Tarieven</a></li>
           <li><a href="#veelgestelde-vragen">Veelgestelde vragen</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
