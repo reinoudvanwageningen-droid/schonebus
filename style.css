@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Inter';
+  font-family: 'Schonebus Sans';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: 'Schonebus Sans';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -15,7 +15,7 @@
 }
 
 @font-face {
-  font-family: 'Outfit';
+  font-family: 'Schonebus Display';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
@@ -23,7 +23,7 @@
 }
 
 @font-face {
-  font-family: 'Outfit';
+  font-family: 'Schonebus Display';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -31,7 +31,7 @@
 }
 
 @font-face {
-  font-family: 'Outfit';
+  font-family: 'Schonebus Display';
   font-style: normal;
   font-weight: 800;
   font-display: swap;
@@ -75,7 +75,7 @@ body {
   min-height: 100vh;
   background: var(--paper);
   color: var(--ink);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Schonebus Sans', Arial, sans-serif;
   font-weight: 400;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -85,7 +85,7 @@ body {
 
 body.menu-open { overflow: hidden; }
 
-h1, h2, h3, h4, h5, h6 { font-family: 'Outfit', sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Schonebus Display', Arial, sans-serif; }
 
 img { display: block; max-width: 100%; height: auto; }
 
@@ -151,7 +151,7 @@ summary::-webkit-details-marker { display: none; }
   justify-content: center;
   gap: 0.5rem;
   border-radius: var(--radius-button);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Schonebus Sans', Arial, sans-serif;
   cursor: pointer;
   border: none;
   transition: all 0.2s;
@@ -234,7 +234,7 @@ summary::-webkit-details-marker { display: none; }
 }
 .header__logo-icon svg { width: 1.25rem; height: 1.25rem; }
 .header__logo-text { display: flex; flex-direction: column; }
-.header__logo-name { font-family: 'Outfit', sans-serif; font-size: clamp(1rem, 4.5vw, 1.1rem); line-height: 1; }
+.header__logo-name { font-family: 'Schonebus Display', Arial, sans-serif; font-size: clamp(1rem, 4.5vw, 1.1rem); line-height: 1; }
 .header__logo-sub { margin-top: 0.25rem; font-size: 0.75rem; font-weight: 500; color: var(--mist); }
 
 .header__nav { display: none; align-items: center; gap: 1.75rem; }
@@ -385,7 +385,7 @@ summary::-webkit-details-marker { display: none; }
   }
 }
 .hero__floating-label { font-size: 0.875rem; font-weight: 500; opacity: 0.8; }
-.hero__floating-value { margin-top: 0.25rem; font-family: 'Outfit', sans-serif; font-size: 1.875rem; font-weight: 700; color: var(--spark); }
+.hero__floating-value { margin-top: 0.25rem; font-family: 'Schonebus Display', Arial, sans-serif; font-size: 1.875rem; font-weight: 700; color: var(--spark); }
 .hero__floating-sub { margin-top: 0.25rem; font-size: 0.875rem; opacity: 0.8; }
 
 /* ── Urgency Bar ── */
@@ -429,7 +429,7 @@ summary::-webkit-details-marker { display: none; }
 /* ── Section headings ── */
 
 .section-heading {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Schonebus Display', Arial, sans-serif;
   font-size: 32px;
   font-weight: 700;
   line-height: 1.15;
@@ -439,7 +439,7 @@ summary::-webkit-details-marker { display: none; }
 @media (min-width: 640px) { .section-heading { font-size: 38px; } }
 
 .section-subheading {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Schonebus Display', Arial, sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--midnight);
@@ -479,13 +479,13 @@ summary::-webkit-details-marker { display: none; }
   padding: 0 1rem;
   font-size: 1rem;
   color: var(--ink);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Schonebus Sans', Arial, sans-serif;
   outline: none;
 }
 .field__input--has-prefix { padding-left: 0; }
 .field__input::-webkit-inner-spin-button,
 .field__input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
-.field__input[type=number] { -moz-appearance: textfield; }
+.field__input[type=number] { appearance: textfield; -moz-appearance: textfield; }
 
 .field__error { display: block; margin-top: 0.5rem; font-size: 0.875rem; color: #dc2626; }
 .field__input-wrap--error { border-color: #f87171; }
@@ -517,7 +517,7 @@ summary::-webkit-details-marker { display: none; }
   padding: 0 1rem;
   font-size: 1rem;
   color: var(--ink);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Schonebus Sans', Arial, sans-serif;
   outline: none;
   cursor: pointer;
   transition: border-color 0.2s;
@@ -542,7 +542,7 @@ summary::-webkit-details-marker { display: none; }
   background: transparent;
   cursor: pointer;
   transition: all 0.2s;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Schonebus Sans', Arial, sans-serif;
 }
 .toggle-btn--active { background: var(--electric); color: var(--paper); }
 
@@ -560,7 +560,7 @@ summary::-webkit-details-marker { display: none; }
 .result__label { font-size: 0.875rem; font-weight: 500; color: var(--mist); }
 .result__header { margin-top: 0.5rem; display: flex; flex-direction: column; align-items: flex-start; gap: 0.75rem; }
 @media (min-width: 640px) { .result__header { flex-direction: row; align-items: center; } }
-.result__total { font-family: 'Outfit', sans-serif; font-size: 2.25rem; font-weight: 700; color: var(--midnight); }
+.result__total { font-family: 'Schonebus Display', Arial, sans-serif; font-size: 2.25rem; font-weight: 700; color: var(--midnight); }
 .result__badge {
   display: inline-flex;
   border-radius: 9999px;
@@ -632,7 +632,7 @@ summary::-webkit-details-marker { display: none; }
   height: 2.5rem;
   border-radius: 50%;
   background: var(--cloud);
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Schonebus Display', Arial, sans-serif;
   font-size: 1.125rem;
   font-weight: 600;
   color: var(--electric);
@@ -675,7 +675,7 @@ summary::-webkit-details-marker { display: none; }
   padding: 1rem;
   box-shadow: var(--shadow-soft);
 }
-.about__stat-value { font-family: 'Outfit', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--midnight); }
+.about__stat-value { font-family: 'Schonebus Display', Arial, sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--midnight); }
 .about__stat-label { margin-top: 0.5rem; font-size: 0.875rem; line-height: 1.5; color: var(--mist); }
 
 .about__card { border-radius: 1rem; border: 1px solid var(--line); background: var(--paper); padding: 2rem; box-shadow: var(--shadow-soft); }
@@ -713,7 +713,7 @@ summary::-webkit-details-marker { display: none; }
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Schonebus Display', Arial, sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--midnight);
@@ -766,7 +766,7 @@ details[open] .faq__chevron { transform: rotate(180deg); }
 }
 
 .team-card__name {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Schonebus Display', Arial, sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--midnight);
@@ -805,7 +805,7 @@ details[open] .faq__chevron { transform: rotate(180deg); }
   padding: 0.75rem 1rem;
   font-size: 1rem;
   color: var(--ink);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Schonebus Sans', Arial, sans-serif;
   outline: none;
   resize: vertical;
   transition: border-color 0.2s;
@@ -886,13 +886,13 @@ details[open] .faq__chevron { transform: rotate(180deg); }
   color: var(--electric);
 }
 .footer__brand-icon svg { width: 1.25rem; height: 1.25rem; }
-.footer__brand-name { font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 700; }
+.footer__brand-name { font-family: 'Schonebus Display', Arial, sans-serif; font-size: 1.25rem; font-weight: 700; }
 
 .footer__body { margin-top: 1rem; max-width: 24rem; font-size: 0.875rem; line-height: 1.75; opacity: 0.8; }
 .footer__ext-link { display: inline-flex; margin-top: 1rem; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
 .footer__ext-link:hover { color: var(--sky); }
 
-.footer__heading { font-family: 'Outfit', sans-serif; font-size: 1.125rem; font-weight: 600; }
+.footer__heading { font-family: 'Schonebus Display', Arial, sans-serif; font-size: 1.125rem; font-weight: 600; }
 .footer__list { margin-top: 1rem; list-style: none; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.875rem; opacity: 0.8; }
 .footer__list a { transition: color 0.2s; }
 .footer__list a:hover { color: var(--sky); }
