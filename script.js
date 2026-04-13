@@ -61,27 +61,57 @@
     vpbSchijf: "laag",
     andereInvesteringen: false,
   };
+  var resultRegion = document.querySelector(".result");
+  var mainContent = document.getElementById("main-content");
+
+  function setText(id, value) {
+    var element = document.getElementById(id);
+    if (element) {
+      element.textContent = value;
+    }
+  }
 
   function updateCalculator() {
     var result = bereken(state);
 
-    document.getElementById("result-total").textContent = formatEuro(result.totaal);
-    document.getElementById("result-badge").textContent = "Totaal " + formatEuro(result.totaal);
-    document.getElementById("result-mia-aftrek").textContent = formatEuro(result.miaAftrek);
-    document.getElementById("result-mia-voordeel").textContent = formatEuro(result.miaVoordeel);
-    document.getElementById("result-kia-aftrek").textContent = formatEuro(result.kiaAftrek);
-    document.getElementById("result-kia-voordeel").textContent = formatEuro(result.kiaVoordeel);
-    document.getElementById("result-totaal").textContent = formatEuro(result.totaal);
+    setText("result-total", formatEuro(result.totaal));
+    setText("result-badge", "Totaal " + formatEuro(result.totaal));
+    setText("result-mia-aftrek", formatEuro(result.miaAftrek));
+    setText("result-mia-voordeel", formatEuro(result.miaVoordeel));
+    setText("result-kia-aftrek", formatEuro(result.kiaAftrek));
+    setText("result-kia-voordeel", formatEuro(result.kiaVoordeel));
+    setText("result-totaal", formatEuro(result.totaal));
+    setText("hero-benefit", formatEuro(result.totaal));
+    setText("hero-price", "op een bus van " + formatEuro(state.prijs));
+  }
+
+  function refreshCalculator(announce) {
+    if (resultRegion) {
+      resultRegion.setAttribute("aria-live", announce ? "polite" : "off");
+    }
+    updateCalculator();
   }
 
   /* ── Calculator: price input ── */
 
   var prijsInput = document.getElementById("aanschafprijs");
   if (prijsInput) {
+    function syncPriceInput() {
+      state.prijs = clamp(Number(prijsInput.value), 10000, 150000);
+      prijsInput.value = state.prijs;
+      refreshCalculator(true);
+    }
+
     prijsInput.addEventListener("input", function () {
-      state.prijs = clamp(Number(this.value), 10000, 150000);
-      updateCalculator();
+      var rawValue = Number(this.value);
+      if (Number.isFinite(rawValue) && rawValue >= 10000 && rawValue <= 150000) {
+        state.prijs = rawValue;
+        refreshCalculator(false);
+      }
     });
+
+    prijsInput.addEventListener("blur", syncPriceInput);
+    prijsInput.addEventListener("change", syncPriceInput);
   }
 
   /* ── Calculator: rechtsvorm radios ── */
@@ -107,7 +137,7 @@
         }
       }
 
-      updateCalculator();
+      refreshCalculator(true);
     });
   });
 
@@ -117,7 +147,7 @@
   if (ibSelect) {
     ibSelect.addEventListener("change", function () {
       state.ibSchijf = this.value;
-      updateCalculator();
+      refreshCalculator(true);
     });
   }
 
@@ -125,7 +155,7 @@
   if (vpbSelect) {
     vpbSelect.addEventListener("change", function () {
       state.vpbSchijf = this.value;
-      updateCalculator();
+      refreshCalculator(true);
     });
   }
 
@@ -149,7 +179,7 @@
         toggleNote.style.display = val ? "" : "none";
       }
 
-      updateCalculator();
+      refreshCalculator(true);
     });
   });
 
@@ -184,45 +214,96 @@
   var mobileMenu = document.getElementById("mobile-menu");
   var menuIcon = document.getElementById("burger-menu");
   var closeIcon = document.getElementById("burger-close");
+  var menuLinks = mobileMenu ? Array.prototype.slice.call(mobileMenu.querySelectorAll("a")) : [];
 
   if (burger && mobileMenu) {
-    burger.addEventListener("click", function () {
-      var isOpen = mobileMenu.classList.toggle("mobile-menu--open");
-      burger.setAttribute("aria-expanded", isOpen);
-      burger.setAttribute("aria-label", isOpen ? "Sluit menu" : "Open menu");
+    function isMenuOpen() {
+      return mobileMenu.classList.contains("mobile-menu--open");
+    }
+
+    function updateMenuIcons(isOpen) {
       if (menuIcon && closeIcon) {
         menuIcon.style.display = isOpen ? "none" : "";
         closeIcon.style.display = isOpen ? "" : "none";
       }
-      if (isOpen) {
+    }
+
+    function openMenu() {
+      mobileMenu.classList.add("mobile-menu--open");
+      burger.setAttribute("aria-expanded", "true");
+      burger.setAttribute("aria-label", "Sluit menu");
+      document.body.classList.add("menu-open");
+      if (mainContent) {
+        mainContent.inert = true;
+        mainContent.setAttribute("aria-hidden", "true");
+      }
+      updateMenuIcons(true);
+      if (header) {
         header.classList.add("header--scrolled");
+      }
+      if (menuLinks[0]) {
+        menuLinks[0].focus();
+      }
+    }
+
+    function closeMenu(restoreFocus) {
+      mobileMenu.classList.remove("mobile-menu--open");
+      burger.setAttribute("aria-expanded", "false");
+      burger.setAttribute("aria-label", "Open menu");
+      document.body.classList.remove("menu-open");
+      if (mainContent) {
+        mainContent.inert = false;
+        mainContent.removeAttribute("aria-hidden");
+      }
+      updateMenuIcons(false);
+      onScroll();
+      if (restoreFocus !== false) {
+        burger.focus();
+      }
+    }
+
+    burger.addEventListener("click", function () {
+      if (isMenuOpen()) {
+        closeMenu();
       } else {
-        onScroll();
+        openMenu();
       }
     });
 
     mobileMenu.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
-        mobileMenu.classList.remove("mobile-menu--open");
-        burger.setAttribute("aria-expanded", "false");
-        burger.setAttribute("aria-label", "Open menu");
-        if (menuIcon && closeIcon) {
-          menuIcon.style.display = "";
-          closeIcon.style.display = "none";
-        }
-        onScroll();
+        closeMenu(false);
       });
     });
 
-    window.addEventListener("resize", function () {
-      if (window.innerWidth >= 768) {
-        mobileMenu.classList.remove("mobile-menu--open");
-        burger.setAttribute("aria-expanded", "false");
-        if (menuIcon && closeIcon) {
-          menuIcon.style.display = "";
-          closeIcon.style.display = "none";
+    document.addEventListener("keydown", function (event) {
+      if (!isMenuOpen()) {
+        return;
+      }
+
+      if (event.key === "Escape") {
+        event.preventDefault();
+        closeMenu();
+        return;
+      }
+
+      if (event.key === "Tab" && menuLinks.length > 1) {
+        var firstLink = menuLinks[0];
+        var lastLink = menuLinks[menuLinks.length - 1];
+
+        if (event.shiftKey && document.activeElement === firstLink) {
+          event.preventDefault();
+          lastLink.focus();
+        } else if (!event.shiftKey && document.activeElement === lastLink) {
+          event.preventDefault();
+          firstLink.focus();
         }
-        onScroll();
+      }
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth >= 768 && isMenuOpen()) {
+        closeMenu(false);
       }
     });
   }
@@ -231,6 +312,46 @@
 
   var contactForm = document.getElementById("contact-form");
   if (contactForm) {
+    function setFieldError(fieldId, errorId, message) {
+      var field = document.getElementById(fieldId);
+      var error = document.getElementById(errorId);
+      if (error) {
+        error.textContent = message;
+      }
+      if (field) {
+        field.setAttribute("aria-invalid", "true");
+        var wrap = field.closest(".field__input-wrap");
+        if (wrap) {
+          wrap.classList.add("field__input-wrap--error");
+        }
+      }
+    }
+
+    function clearFieldError(fieldId, errorId) {
+      var field = document.getElementById(fieldId);
+      var error = document.getElementById(errorId);
+      if (error) {
+        error.textContent = "";
+      }
+      if (field) {
+        field.setAttribute("aria-invalid", "false");
+        var wrap = field.closest(".field__input-wrap");
+        if (wrap) {
+          wrap.classList.remove("field__input-wrap--error");
+        }
+      }
+    }
+
+    ["naam", "bedrijfsnaam", "email"].forEach(function (fieldId) {
+      var errorId = "error-" + fieldId;
+      var field = document.getElementById(fieldId);
+      if (field) {
+        field.addEventListener("input", function () {
+          clearFieldError(fieldId, errorId);
+        });
+      }
+    });
+
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
 
@@ -242,26 +363,33 @@
       var bericht = document.getElementById("bericht").value.trim();
 
       var hasError = false;
-      document.querySelectorAll(".field__error").forEach(function (el) { el.textContent = ""; });
-      document.querySelectorAll(".field__input-wrap--error").forEach(function (el) { el.classList.remove("field__input-wrap--error"); });
+      var firstInvalidField = null;
+      clearFieldError("naam", "error-naam");
+      clearFieldError("bedrijfsnaam", "error-bedrijfsnaam");
+      clearFieldError("email", "error-email");
 
       if (!naam) {
-        document.getElementById("error-naam").textContent = "Vul je naam in.";
-        document.getElementById("naam").closest(".field__input-wrap").classList.add("field__input-wrap--error");
+        setFieldError("naam", "error-naam", "Vul je naam in.");
+        firstInvalidField = firstInvalidField || document.getElementById("naam");
         hasError = true;
       }
       if (!bedrijfsnaam) {
-        document.getElementById("error-bedrijfsnaam").textContent = "Vul je bedrijfsnaam in.";
-        document.getElementById("bedrijfsnaam").closest(".field__input-wrap").classList.add("field__input-wrap--error");
+        setFieldError("bedrijfsnaam", "error-bedrijfsnaam", "Vul je bedrijfsnaam in.");
+        firstInvalidField = firstInvalidField || document.getElementById("bedrijfsnaam");
         hasError = true;
       }
       if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        document.getElementById("error-email").textContent = email ? "Vul een geldig emailadres in." : "Vul je emailadres in.";
-        document.getElementById("email").closest(".field__input-wrap").classList.add("field__input-wrap--error");
+        setFieldError("email", "error-email", email ? "Vul een geldig emailadres in." : "Vul je emailadres in.");
+        firstInvalidField = firstInvalidField || document.getElementById("email");
         hasError = true;
       }
 
-      if (hasError) return;
+      if (hasError) {
+        if (firstInvalidField) {
+          firstInvalidField.focus();
+        }
+        return;
+      }
 
       var lines = [
         "Naam: " + naam,
@@ -279,5 +407,5 @@
     });
   }
 
-  updateCalculator();
+  refreshCalculator(false);
 })();

@@ -3,21 +3,151 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0A1B3D">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#0A1B3D">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#07101F">
+  <meta name="robots" content="index,follow,max-image-preview:large">
   <title>schonebus.nl, fiscaal voordeel op je elektrische bestelbus</title>
   <meta name="description" content="Bereken in 30 seconden wat je terugkrijgt via MIA, Vamil en KIA op je nieuwe elektrische bestelbus. No cure, no pay.">
+  <link rel="canonical" href="https://reinoudvanwageningen-droid.github.io/schonebus/">
   <meta property="og:title" content="schonebus.nl, fiscaal voordeel op je elektrische bestelbus">
   <meta property="og:description" content="Bereken in 30 seconden wat je terugkrijgt via MIA, Vamil en KIA op je nieuwe elektrische bestelbus. No cure, no pay.">
-  <meta property="og:image" content="og.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="schonebus.nl">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:url" content="https://reinoudvanwageningen-droid.github.io/schonebus/">
+  <meta property="og:image" content="https://reinoudvanwageningen-droid.github.io/schonebus/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="schonebus.nl">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="schonebus.nl, fiscaal voordeel op je elektrische bestelbus">
+  <meta name="twitter:description" content="Bereken in 30 seconden wat je terugkrijgt via MIA, Vamil en KIA op je nieuwe elektrische bestelbus. No cure, no pay.">
+  <meta name="twitter:image" content="https://reinoudvanwageningen-droid.github.io/schonebus/og.png">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link
+    rel="preload"
+    as="image"
+    href="assets/erik-mathijs-truck-800.jpg"
+    imagesrcset="assets/erik-mathijs-truck-400.jpg 400w, assets/erik-mathijs-truck-800.jpg 800w, assets/erik-mathijs-truck.webp 1200w"
+    imagesizes="(max-width: 639px) calc(100vw - 2rem), (max-width: 1023px) calc(100vw - 3rem), 560px"
+  >
   <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://reinoudvanwageningen-droid.github.io/schonebus/#organization",
+        "name": "ZET Groep",
+        "url": "https://zetgroep.nl/",
+        "logo": "https://reinoudvanwageningen-droid.github.io/schonebus/favicon.svg",
+        "email": "aanvraag@zetgroep.nl",
+        "telephone": "+31624896920",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Mollerusweg 62",
+          "postalCode": "2031 BZ",
+          "addressLocality": "Haarlem",
+          "addressCountry": "NL"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://reinoudvanwageningen-droid.github.io/schonebus/#website",
+        "url": "https://reinoudvanwageningen-droid.github.io/schonebus/",
+        "name": "schonebus.nl",
+        "inLanguage": "nl-NL"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://reinoudvanwageningen-droid.github.io/schonebus/#service",
+        "name": "Fiscale begeleiding voor elektrische bestelbussen",
+        "description": "Begeleiding bij MIA, Vamil en KIA voor ondernemers met een elektrische bestelbus.",
+        "url": "https://reinoudvanwageningen-droid.github.io/schonebus/",
+        "provider": {
+          "@id": "https://reinoudvanwageningen-droid.github.io/schonebus/#organization"
+        },
+        "areaServed": "NL"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://reinoudvanwageningen-droid.github.io/schonebus/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Wat kost het als de aanvraag niet lukt?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Niets. We werken no cure, no pay."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Welke termijn moet ik halen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "De aanvraag moet binnen 3 maanden na de datum van je opdrachtbevestiging binnen zijn bij RVO."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Bestaat de SEBA subsidie nog?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nee. SEBA is per 31 december 2024 gesloten. We werken nu met MIA, Vamil, KIA en EIA op onderdelen."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wat is het verschil tussen MIA en EIA voor mijn bus?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "MIA gaat over de bus zelf, code E 3101. EIA gaat over specifieke energiebesparende onderdelen, bijvoorbeeld het batterijpakket of een elektrische koeling."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kan ik MIA en KIA combineren?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja. Beide regelingen mogen naast elkaar."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Geldt dit ook voor tweedehands elektrische bussen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "MIA geldt alleen voor nieuwe bedrijfsmiddelen. Voor gebruikte bussen kijkt ZET Groep per geval."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Werkt mijn boekhouder mee?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja. ZET Groep levert alles aan zoals je boekhouder het in de aangifte kan verwerken."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hoe zit het met wegenbelasting?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "De volledige vrijstelling voor elektrische bestelbussen is in 2026 vervallen. Je betaalt nu het normale tarief."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Ga direct naar de inhoud</a>
 
 <!-- ════ Header ════ -->
 <header class="header" id="site-header">
@@ -57,7 +187,7 @@
   </div>
 </header>
 
-<main>
+<main id="main-content">
 
 <!-- ════ Hero ════ -->
 <section id="top" class="hero">
@@ -99,13 +229,23 @@
     <div class="hero__image-wrapper">
       <div class="hero__image-frame">
         <div class="hero__image-inner">
-          <img src="assets/erik-mathijs-truck.webp" alt="Mathijs Vrijbloed en Erik van der Eng bij een elektrische truck" loading="eager">
+          <img
+            src="assets/erik-mathijs-truck-800.jpg"
+            srcset="assets/erik-mathijs-truck-400.jpg 400w, assets/erik-mathijs-truck-800.jpg 800w, assets/erik-mathijs-truck.webp 1200w"
+            sizes="(max-width: 639px) calc(100vw - 2rem), (max-width: 1023px) calc(100vw - 3rem), 560px"
+            width="1200"
+            height="800"
+            alt="Mathijs Vrijbloed en Erik van der Eng bij een elektrische truck"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+          >
         </div>
       </div>
       <div class="hero__floating-card">
         <p class="hero__floating-label">Geschat voordeel</p>
-        <p class="hero__floating-value">€ 4.820</p>
-        <p class="hero__floating-sub">op een bus van € 38.500</p>
+        <p class="hero__floating-value" id="hero-benefit">€ 7.828</p>
+        <p class="hero__floating-sub" id="hero-price">op een bus van € 38.500</p>
       </div>
     </div>
   </div>
@@ -202,8 +342,8 @@
         </label>
 
         <div>
-          <span class="field__label">Heb je dit jaar al andere investeringen gedaan?</span>
-          <div class="toggle-group">
+          <span class="field__label" id="investeringen-label">Heb je dit jaar al andere investeringen gedaan?</span>
+          <div class="toggle-group" role="group" aria-labelledby="investeringen-label">
             <button type="button" class="toggle-btn toggle-btn--active" data-value="false" aria-pressed="true">Nee</button>
             <button type="button" class="toggle-btn" data-value="true" aria-pressed="false">Ja</button>
           </div>
@@ -214,8 +354,8 @@
       <div class="result" aria-live="polite">
         <p class="result__label">Geschat fiscaal voordeel</p>
         <div class="result__header">
-          <p class="result__total" id="result-total">€ 0</p>
-          <span class="result__badge" id="result-badge">Totaal € 0</span>
+          <p class="result__total" id="result-total">€ 7.828</p>
+          <span class="result__badge" id="result-badge">Totaal € 7.828</span>
         </div>
 
         <div class="result__breakdown">
@@ -223,26 +363,26 @@
 
           <div class="result__row">
             <span>MIA aftrek (27%)</span>
-            <span id="result-mia-aftrek">€ 0</span>
+            <span id="result-mia-aftrek">€ 10.395</span>
           </div>
           <div class="result__row result__row--sub">
             <span>voordeel</span>
-            <span id="result-mia-voordeel">€ 0</span>
+            <span id="result-mia-voordeel">€ 3.843</span>
           </div>
 
           <div class="result__row mt-3">
             <span>KIA aftrek</span>
-            <span id="result-kia-aftrek">€ 0</span>
+            <span id="result-kia-aftrek">€ 10.780</span>
           </div>
           <div class="result__row result__row--sub">
             <span>voordeel</span>
-            <span id="result-kia-voordeel">€ 0</span>
+            <span id="result-kia-voordeel">€ 3.985</span>
           </div>
 
           <div class="result__divider">
             <div class="result__row result__row--total">
               <span>Totaal voordeel</span>
-              <span id="result-totaal">€ 0</span>
+              <span id="result-totaal">€ 7.828</span>
             </div>
           </div>
         </div>
@@ -266,7 +406,16 @@
       </div>
       <div class="howitworks__image-frame">
         <div class="howitworks__image-inner">
-          <img src="assets/erik-mathijs-hero.webp" alt="Mathijs Vrijbloed en Erik van der Eng van ZET Groep" loading="lazy">
+          <img
+            src="assets/erik-mathijs-hero-360.jpg"
+            srcset="assets/erik-mathijs-hero-360.jpg 360w, assets/erik-mathijs-hero-600.jpg 600w"
+            sizes="(max-width: 1023px) calc(100vw - 3rem), 360px"
+            width="600"
+            height="900"
+            alt="Mathijs Vrijbloed en Erik van der Eng van ZET Groep"
+            loading="lazy"
+            decoding="async"
+          >
         </div>
       </div>
     </div>
@@ -351,7 +500,7 @@
         </div>
         <div class="about__card-links">
           <a class="about__card-link" href="mailto:aanvraag@zetgroep.nl">aanvraag@zetgroep.nl</a>
-          <a class="about__card-link" href="tel:0624896920">06 24 89 69 20</a>
+          <a class="about__card-link" href="tel:+31624896920">06 24 89 69 20</a>
         </div>
         <p class="about__contacts-title">Contactpersonen</p>
         <div class="about__contacts-list">
@@ -447,7 +596,7 @@
 
         <div class="contact__links">
           <a class="contact__link" href="mailto:aanvraag@zetgroep.nl">aanvraag@zetgroep.nl</a>
-          <a class="contact__link" href="tel:0624896920">06 24 89 69 20</a>
+          <a class="contact__link" href="tel:+31624896920">06 24 89 69 20</a>
         </div>
 
         <p class="text-sm-mist mt-6">Je spreekt direct met Mathijs of Erik.</p>
@@ -484,11 +633,23 @@
       </div>
 
       <div class="card contact__form-card">
-        <form class="contact__form" id="contact-form" novalidate>
+        <form
+          class="contact__form"
+          id="contact-form"
+          action="mailto:aanvraag@zetgroep.nl"
+          method="post"
+          enctype="text/plain"
+          novalidate
+        >
+          <noscript>
+            <p class="contact__hint">
+              Zonder JavaScript opent dit formulier direct je mailapp. Je kunt ook mailen naar aanvraag@zetgroep.nl.
+            </p>
+          </noscript>
           <label>
             <span class="field__label">Naam</span>
             <span class="field__input-wrap">
-              <input class="field__input" type="text" id="naam" autocomplete="name">
+              <input class="field__input" type="text" id="naam" autocomplete="name" required aria-describedby="error-naam" aria-invalid="false">
             </span>
             <span class="field__error" id="error-naam"></span>
           </label>
@@ -496,7 +657,7 @@
           <label>
             <span class="field__label">Bedrijfsnaam</span>
             <span class="field__input-wrap">
-              <input class="field__input" type="text" id="bedrijfsnaam" autocomplete="organization">
+              <input class="field__input" type="text" id="bedrijfsnaam" autocomplete="organization" required aria-describedby="error-bedrijfsnaam" aria-invalid="false">
             </span>
             <span class="field__error" id="error-bedrijfsnaam"></span>
           </label>
@@ -504,7 +665,7 @@
           <label>
             <span class="field__label">Email</span>
             <span class="field__input-wrap">
-              <input class="field__input" type="email" id="email" autocomplete="email">
+              <input class="field__input" type="email" id="email" autocomplete="email" required aria-describedby="error-email" aria-invalid="false">
             </span>
             <span class="field__error" id="error-email"></span>
           </label>
@@ -512,14 +673,14 @@
           <label>
             <span class="field__label">Telefoon (optioneel)</span>
             <span class="field__input-wrap">
-              <input class="field__input" type="tel" id="telefoon" autocomplete="tel">
+              <input class="field__input" type="tel" id="telefoon" autocomplete="tel" inputmode="tel">
             </span>
           </label>
 
           <label>
             <span class="field__label">Aanschafprijs bus</span>
             <span class="field__input-wrap">
-              <input class="field__input" type="text" id="aanschafprijs-bus">
+              <input class="field__input" type="text" id="aanschafprijs-bus" inputmode="numeric">
             </span>
           </label>
 
@@ -529,6 +690,7 @@
           </label>
 
           <button type="submit" class="btn btn--primary btn--lg">Aanvraag verzenden</button>
+          <p class="contact__hint">Bij het verzenden opent je mailapp met de ingevulde gegevens.</p>
         </form>
       </div>
     </div>
@@ -567,8 +729,8 @@
         <ul class="footer__list">
           <li>ZET Groep in Haarlem</li>
           <li>KvK op aanvraag</li>
-          <li>Privacy</li>
-          <li>Algemene voorwaarden</li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="algemene-voorwaarden.html">Algemene voorwaarden</a></li>
         </ul>
       </div>
     </div>
