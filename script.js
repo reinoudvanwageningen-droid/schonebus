@@ -312,6 +312,10 @@
 
   var contactForm = document.getElementById("contact-form");
   if (contactForm) {
+    var formSubmitSubject = document.getElementById("formsubmit-subject");
+    var formSubmitReplyTo = document.getElementById("formsubmit-replyto");
+    var contactSubmitButton = contactForm.querySelector('button[type="submit"]');
+
     function setFieldError(fieldId, errorId, message) {
       var field = document.getElementById(fieldId);
       var error = document.getElementById(errorId);
@@ -358,10 +362,6 @@
       var naam = document.getElementById("naam").value.trim();
       var bedrijfsnaam = document.getElementById("bedrijfsnaam").value.trim();
       var email = document.getElementById("email").value.trim();
-      var telefoon = document.getElementById("telefoon").value.trim();
-      var busPrijs = document.getElementById("aanschafprijs-bus").value.trim();
-      var bericht = document.getElementById("bericht").value.trim();
-
       var hasError = false;
       var firstInvalidField = null;
       clearFieldError("naam", "error-naam");
@@ -391,19 +391,20 @@
         return;
       }
 
-      var lines = [
-        "Naam: " + naam,
-        "Bedrijfsnaam: " + bedrijfsnaam,
-        telefoon ? "Telefoon: " + telefoon : "",
-        busPrijs ? "Aanschafprijs bus: €" + busPrijs : "",
-        "",
-        bericht || "",
-      ].filter(Boolean);
+      if (formSubmitSubject) {
+        formSubmitSubject.value = "Aanvraag schonebus.nl voor " + bedrijfsnaam;
+      }
 
-      var subject = encodeURIComponent("Aanvraag schonebus.nl voor " + bedrijfsnaam);
-      var body = encodeURIComponent(lines.join("\n"));
+      if (formSubmitReplyTo) {
+        formSubmitReplyTo.value = email;
+      }
 
-      window.location.href = "mailto:aanvraag@zetgroep.nl?subject=" + subject + "&body=" + body;
+      if (contactSubmitButton) {
+        contactSubmitButton.disabled = true;
+        contactSubmitButton.textContent = "Bezig met verzenden";
+      }
+
+      contactForm.submit();
     });
   }
 

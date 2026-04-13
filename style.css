@@ -776,6 +776,7 @@ details[open] .faq__chevron { transform: rotate(180deg); }
 .contact__form-card { padding: 1.5rem; }
 @media (min-width: 640px) { .contact__form-card { padding: 2rem; } }
 .contact__form { display: flex; flex-direction: column; gap: 1.25rem; }
+.contact__bot-field { display: none !important; }
 
 .contact__hint {
   font-size: 0.875rem;

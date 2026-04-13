@@ -638,20 +638,24 @@
         <form
           class="contact__form"
           id="contact-form"
-          action="mailto:aanvraag@zetgroep.nl"
+          action="https://formsubmit.co/aanvraag@zetgroep.nl"
           method="post"
-          enctype="text/plain"
           novalidate
         >
+          <input type="hidden" name="_subject" id="formsubmit-subject" value="Nieuwe aanvraag via schonebus.nl">
+          <input type="hidden" name="_next" value="https://reinoudvanwageningen-droid.github.io/schonebus/bedankt.html">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_replyto" id="formsubmit-replyto" value="">
+          <input type="text" name="_honey" class="contact__bot-field" tabindex="-1" autocomplete="off">
           <noscript>
             <p class="contact__hint">
-              Zonder JavaScript opent dit formulier direct je mailapp. Je kunt ook mailen naar aanvraag@zetgroep.nl.
+              Zonder JavaScript verstuurt dit formulier direct via FormSubmit. Je kunt ook mailen naar aanvraag@zetgroep.nl.
             </p>
           </noscript>
           <label>
             <span class="field__label">Naam</span>
             <span class="field__input-wrap">
-              <input class="field__input" type="text" id="naam" autocomplete="name" required aria-describedby="error-naam" aria-invalid="false">
+              <input class="field__input" type="text" id="naam" name="naam" autocomplete="name" required aria-describedby="error-naam" aria-invalid="false">
             </span>
             <span class="field__error" id="error-naam"></span>
           </label>
@@ -659,7 +663,7 @@
           <label>
             <span class="field__label">Bedrijfsnaam</span>
             <span class="field__input-wrap">
-              <input class="field__input" type="text" id="bedrijfsnaam" autocomplete="organization" required aria-describedby="error-bedrijfsnaam" aria-invalid="false">
+              <input class="field__input" type="text" id="bedrijfsnaam" name="bedrijfsnaam" autocomplete="organization" required aria-describedby="error-bedrijfsnaam" aria-invalid="false">
             </span>
             <span class="field__error" id="error-bedrijfsnaam"></span>
           </label>
@@ -667,7 +671,7 @@
           <label>
             <span class="field__label">Email</span>
             <span class="field__input-wrap">
-              <input class="field__input" type="email" id="email" autocomplete="email" required aria-describedby="error-email" aria-invalid="false">
+              <input class="field__input" type="email" id="email" name="email" autocomplete="email" required aria-describedby="error-email" aria-invalid="false">
             </span>
             <span class="field__error" id="error-email"></span>
           </label>
@@ -675,24 +679,24 @@
           <label>
             <span class="field__label">Telefoon (optioneel)</span>
             <span class="field__input-wrap">
-              <input class="field__input" type="tel" id="telefoon" autocomplete="tel" inputmode="tel">
+              <input class="field__input" type="tel" id="telefoon" name="telefoon" autocomplete="tel" inputmode="tel">
             </span>
           </label>
 
           <label>
             <span class="field__label">Aanschafprijs bus</span>
             <span class="field__input-wrap">
-              <input class="field__input" type="text" id="aanschafprijs-bus" inputmode="numeric">
+              <input class="field__input" type="text" id="aanschafprijs-bus" name="aanschafprijs_bus" inputmode="numeric">
             </span>
           </label>
 
           <label>
             <span class="field__label">Bericht</span>
-            <textarea class="contact__textarea" id="bericht"></textarea>
+            <textarea class="contact__textarea" id="bericht" name="bericht"></textarea>
           </label>
 
           <button type="submit" class="btn btn--primary btn--lg">Aanvraag verzenden</button>
-          <p class="contact__hint">Bij het verzenden opent je mailapp met de ingevulde gegevens.</p>
+          <p class="contact__hint">Na verzenden ga je naar een bevestigingspagina en ontvangt ZET Groep je aanvraag via FormSubmit.</p>
         </form>
       </div>
     </div>
