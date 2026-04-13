@@ -45,10 +45,7 @@ export function Contact({ prefilledPrice }: ContactProps) {
     bericht: "",
   });
   const [errors, setErrors] = useState<FormErrors>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [status, setStatus] = useState<{ type: "success" | "error"; message: string } | null>(
-    null,
-  );
+  
 
   useEffect(() => {
     setForm((current) => ({
@@ -60,7 +57,7 @@ export function Contact({ prefilledPrice }: ContactProps) {
   function updateField<K extends keyof FormValues>(key: K, value: FormValues[K]) {
     setForm((current) => ({ ...current, [key]: value }));
     setErrors((current) => ({ ...current, [key]: undefined }));
-    setStatus(null);
+    
   }
 
   function validate() {
@@ -90,43 +87,19 @@ export function Contact({ prefilledPrice }: ContactProps) {
       return;
     }
 
-    setIsSubmitting(true);
-    setStatus(null);
+    const lines = [
+      `Naam: ${form.naam}`,
+      `Bedrijfsnaam: ${form.bedrijfsnaam}`,
+      form.telefoon ? `Telefoon: ${form.telefoon}` : "",
+      form.aanschafprijsBus ? `Aanschafprijs bus: €${form.aanschafprijsBus}` : "",
+      "",
+      form.bericht || "",
+    ].filter(Boolean);
 
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(form),
-      });
+    const subject = encodeURIComponent(`Aanvraag schonebus.nl – ${form.bedrijfsnaam}`);
+    const body = encodeURIComponent(lines.join("\n"));
 
-      if (!response.ok) {
-        throw new Error("Verzenden mislukt");
-      }
-
-      setStatus({
-        type: "success",
-        message: "Je aanvraag is verzonden. We reageren binnen één werkdag.",
-      });
-      setForm({
-        naam: "",
-        bedrijfsnaam: "",
-        email: "",
-        telefoon: "",
-        aanschafprijsBus: formatPrice(prefilledPrice),
-        bericht: "",
-      });
-      setErrors({});
-    } catch {
-      setStatus({
-        type: "error",
-        message: "Verzenden lukt nu niet. Mail je aanvraag naar aanvraag@zetgroep.nl.",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+    window.location.href = `mailto:${CONTACT_DETAILS.email}?subject=${subject}&body=${body}`;
   }
 
   return (
@@ -224,23 +197,8 @@ export function Contact({ prefilledPrice }: ContactProps) {
               />
             </label>
 
-            {status ? (
-              <div
-                className={[
-                  "rounded-[14px] border px-4 py-3 text-sm",
-                  status.type === "success"
-                    ? "border-electric/20 bg-cloud text-midnight"
-                    : "border-red-300 bg-red-50 text-red-700",
-                ]
-                  .filter(Boolean)
-                  .join(" ")}
-              >
-                {status.message}
-              </div>
-            ) : null}
-
-            <Button type="submit" size="lg" disabled={isSubmitting}>
-              {isSubmitting ? "Bezig met verzenden" : "Aanvraag verzenden"}
+            <Button type="submit" size="lg">
+              Aanvraag verzenden
             </Button>
           </form>
         </Card>
