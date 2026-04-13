@@ -256,7 +256,7 @@
         hasError = true;
       }
       if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        document.getElementById("error-email").textContent = email ? "Vul een geldig e-mailadres in." : "Vul je e-mailadres in.";
+        document.getElementById("error-email").textContent = email ? "Vul een geldig emailadres in." : "Vul je emailadres in.";
         document.getElementById("email").closest(".field__input-wrap").classList.add("field__input-wrap--error");
         hasError = true;
       }
@@ -272,7 +272,7 @@
         bericht || "",
       ].filter(Boolean);
 
-      var subject = encodeURIComponent("Aanvraag schonebus.nl – " + bedrijfsnaam);
+      var subject = encodeURIComponent("Aanvraag schonebus.nl voor " + bedrijfsnaam);
       var body = encodeURIComponent(lines.join("\n"));
 
       window.location.href = "mailto:aanvraag@zetgroep.nl?subject=" + subject + "&body=" + body;
