@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero background variants</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="hero-variants.css">
+</head>
+<body class="hero-lab-page">
+  <header class="header header--scrolled">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <span class="header__logo-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m13 3-6 10h5l-1 8 6-10h-5l1-8Z"/></svg>
+        </span>
+        <span class="header__logo-text">
+          <span class="header__logo-name">schonebus.nl</span>
+          <span class="header__logo-sub">hero lab</span>
+        </span>
+      </a>
+      <nav class="header__nav">
+        <a href="#variant-a" class="header__nav-link">Variant A</a>
+        <a href="#variant-b" class="header__nav-link">Variant B</a>
+        <a href="#variant-c" class="header__nav-link">Variant C</a>
+      </nav>
+      <a href="index.html" class="btn btn--primary btn--md">Back to homepage</a>
+    </div>
+  </header>
+
+  <main class="hero-lab">
+    <div class="hero-lab__container">
+      <section class="hero-lab__intro card">
+        <p class="hero-lab__kicker">Hero explorations</p>
+        <h1 class="section-heading mt-4">Three ways to turn the truck photo into the hero background</h1>
+        <p class="section-text mt-4">Variant B is the closest match to your brief because the trust bullets push into the photo area. This page keeps all three directions visible on localhost so you can compare them side by side.</p>
+        <div class="hero-lab__jump mt-6">
+          <a href="#variant-a" class="btn btn--secondary btn--md">Open variant A</a>
+          <a href="#variant-b" class="btn btn--secondary btn--md">Open variant B</a>
+          <a href="#variant-c" class="btn btn--secondary btn--md">Open variant C</a>
+        </div>
+      </section>
+
+      <article id="variant-a" class="hero-demo section">
+        <div class="hero-demo__meta">
+          <span class="hero-demo__badge">Variant A</span>
+          <h2 class="section-heading mt-4">Full-bleed overlay</h2>
+          <p class="section-text mt-3 hero-demo__summary">The truck photo fills the whole hero. The text turns white and the trust bullets become glass pills on top of a dark overlay.</p>
+        </div>
+        <section class="hero hero--demo hero--a">
+          <div class="hero__grid">
+            <div class="hero__content">
+              <h2 class="hero__title">Elektrische bestelbus gekocht? Haal je fiscale voordeel terug.</h2>
+              <p class="hero__text">SEBA is gesloten en RVO zet elektrische bestelauto's in 2026 niet meer op de Milieulijst. Wij rekenen je KIA-indicatie door en checken of laadinfra of energiebesparende onderdelen nog apart voordeel opleveren.</p>
+              <div class="hero__actions">
+                <a href="index.html#calculator" class="btn btn--primary btn--lg">Bereken mijn voordeel</a>
+                <a href="index.html#hoe-het-werkt" class="btn btn--secondary btn--lg">Hoe het werkt</a>
+              </div>
+              <ul class="hero__trust">
+                <li class="hero__trust-item"><svg class="hero__trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>No cure, no pay</span></li>
+                <li class="hero__trust-item"><svg class="hero__trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Aanvraag binnen 24 uur in behandeling</span></li>
+                <li class="hero__trust-item"><svg class="hero__trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Werkt samen met je eigen boekhouder</span></li>
+              </ul>
+            </div>
+            <div class="hero__floating-card">
+              <p class="hero__floating-label">KIA-indicatie</p>
+              <p class="hero__floating-value">€ 4.049</p>
+              <p class="hero__floating-sub">bij een bus van € 38.500</p>
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <article id="variant-b" class="hero-demo section">
+        <div class="hero-demo__meta">
+          <span class="hero-demo__badge">Variant B</span>
+          <h2 class="section-heading mt-4">Split layout with overlap</h2>
+          <p class="section-text mt-3 hero-demo__summary">The copy stays on white, the photo sits behind the right side, and the trust bullets push halfway across the image. This is the closest match to your “bulletpoints half overheen” note.</p>
+        </div>
+        <section class="hero hero--demo hero--b">
+          <div class="hero__grid">
+            <div class="hero__content">
+              <h2 class="hero__title">Elektrische bestelbus gekocht? Haal je fiscale voordeel terug.</h2>
+              <p class="hero__text">SEBA is gesloten en RVO zet elektrische bestelauto's in 2026 niet meer op de Milieulijst. Wij rekenen je KIA-indicatie door en checken of laadinfra of energiebesparende onderdelen nog apart voordeel opleveren.</p>
+              <div class="hero__actions">
+                <a href="index.html#calculator" class="btn btn--primary btn--lg">Bereken mijn voordeel</a>
+                <a href="index.html#hoe-het-werkt" class="btn btn--secondary btn--lg">Hoe het werkt</a>
+              </div>
+              <ul class="hero__trust">
+                <li class="hero__trust-item"><svg class="hero__trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>No cure, no pay</span></li>
+                <li class="hero__trust-item"><svg class="hero__trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Aanvraag binnen 24 uur in behandeling</span></li>
+                <li class="hero__trust-item"><svg class="hero__trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Werkt samen met je eigen boekhouder</span></li>
+              </ul>
+            </div>
+            <div class="hero__floating-card">
+              <p class="hero__floating-label">KIA-indicatie</p>
+              <p class="hero__floating-value">€ 4.049</p>
+              <p class="hero__floating-sub">bij een bus van € 38.500</p>
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <article id="variant-c" class="hero-demo section">
+        <div class="hero-demo__meta">
+          <span class="hero-demo__badge">Variant C</span>
+          <h2 class="section-heading mt-4">Soft vignette fade</h2>
+          <p class="section-text mt-3 hero-demo__summary">The truck photo still fills the hero, but the left side gets a bright radial window so the copy keeps a lighter, softer feel while the edges stay atmospheric.</p>
+        </div>
+        <section class="hero hero--demo hero--c">
+          <div class="hero__grid">
+            <div class="hero__content">
+              <h2 class="hero__title">Elektrische bestelbus gekocht? Haal je fiscale voordeel terug.</h2>
+              <p class="hero__text">SEBA is gesloten en RVO zet elektrische bestelauto's in 2026 niet meer op de Milieulijst. Wij rekenen je KIA-indicatie door en checken of laadinfra of energiebesparende onderdelen nog apart voordeel opleveren.</p>
+              <div class="hero__actions">
+                <a href="index.html#calculator" class="btn btn--primary btn--lg">Bereken mijn voordeel</a>
+                <a href="index.html#hoe-het-werkt" class="btn btn--secondary btn--lg">Hoe het werkt</a>
+              </div>
+              <ul class="hero__trust">
+                <li class="hero__trust-item"><svg class="hero__trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>No cure, no pay</span></li>
+                <li class="hero__trust-item"><svg class="hero__trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Aanvraag binnen 24 uur in behandeling</span></li>
+                <li class="hero__trust-item"><svg class="hero__trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Werkt samen met je eigen boekhouder</span></li>
+              </ul>
+            </div>
+            <div class="hero__floating-card">
+              <p class="hero__floating-label">KIA-indicatie</p>
+              <p class="hero__floating-value">€ 4.049</p>
+              <p class="hero__floating-sub">bij een bus van € 38.500</p>
+            </div>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+</body>
+</html>

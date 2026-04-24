@@ -1,0 +1,299 @@
+:root {
+  --hero-photo: url('assets/erik-mathijs-truck-1200.jpg');
+}
+.hero-lab-page {
+  background: var(--cloud);
+}
+
+.hero-lab {
+  padding: 6.5rem 1rem 4rem;
+}
+
+.hero-lab__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-lab__intro {
+  padding: 1.5rem;
+}
+
+.hero-lab__kicker {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--electric);
+}
+
+.hero-lab__jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.hero-demo + .hero-demo {
+  margin-top: 2rem;
+}
+
+.hero-demo__meta {
+  margin-bottom: 1rem;
+}
+
+.hero-demo__badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  background: rgba(30, 95, 216, 0.1);
+  padding: 0.375rem 0.875rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--electric);
+}
+
+.hero-demo__summary {
+  margin-top: 0.75rem;
+  max-width: 42rem;
+}
+
+.hero--demo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 32px;
+  box-shadow: var(--shadow-soft);
+}
+
+.hero--demo .hero__grid,
+.hero--live.hero--b .hero__grid {
+  position: relative;
+  z-index: 1;
+  max-width: 1152px;
+}
+.hero--demo .hero__content,
+.hero--live.hero--b .hero__content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero--demo .hero__text,
+.hero--live.hero--b .hero__text {
+  max-width: 40rem;
+}
+
+.hero--demo .hero__floating-card,
+.hero--live.hero--b .hero__floating-card {
+  z-index: 3;
+}
+
+.hero--a::before,
+.hero--b::before,
+.hero--c::before,
+.hero--a::after,
+.hero--b::after,
+.hero--c::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero--a::before,
+.hero--c::before {
+  background: var(--hero-photo) center / cover no-repeat;
+}
+
+.hero--a::after {
+  background: linear-gradient(120deg, rgba(10, 27, 61, 0.92) 18%, rgba(10, 27, 61, 0.62) 55%, rgba(10, 27, 61, 0.82) 100%);
+}
+
+.hero--a .hero__title,
+.hero--a .hero__text {
+  color: #ffffff;
+}
+
+.hero--a .hero__trust {
+  max-width: 46rem;
+}
+
+.hero--a .hero__trust-item {
+  border-color: rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.hero--a .hero__trust-icon {
+  color: var(--spark);
+}
+
+.hero--a .btn--secondary {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+}
+
+.hero--b {
+  background: linear-gradient(180deg, #ffffff 0%, #eef4ff 100%);
+}
+
+.hero--b::before {
+  inset: auto 0 0 0;
+  height: 43%;
+  background: var(--hero-photo) center bottom / cover no-repeat;
+}
+
+.hero--b::after {
+  inset: auto 0 0 0;
+  height: 48%;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.58) 42%, rgba(255, 255, 255, 0) 100%);
+}
+
+.hero--b .hero__grid {
+  display: block;
+  min-height: 54rem;
+}
+
+.hero--b .hero__content {
+  max-width: 42rem;
+}
+
+.hero--b .hero__trust {
+  margin-top: clamp(10rem, 20vw, 13rem);
+}
+
+.hero--b .hero__trust-item {
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.hero--b .hero__floating-card {
+  position: relative;
+  margin-top: 1.25rem;
+}
+
+.hero--c::after {
+  background:
+    radial-gradient(circle at 24% 18%, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.9) 18%, rgba(255, 255, 255, 0.54) 34%, rgba(10, 27, 61, 0.24) 58%, rgba(10, 27, 61, 0.9) 100%);
+}
+
+.hero--c .hero__text {
+  color: rgba(10, 27, 61, 0.76);
+}
+
+.hero--c .hero__trust {
+  max-width: 42rem;
+}
+
+.hero--c .hero__trust-item {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(10, 27, 61, 0.58);
+  color: #ffffff;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.hero--c .hero__trust-icon {
+  color: var(--spark);
+}
+
+.hero--c .hero__floating-card {
+  position: relative;
+  margin-top: 1.25rem;
+}
+
+.hero--demo .hero__floating-card,
+.hero--live.hero--b .hero__floating-card {
+  max-width: 18rem;
+}
+
+.hero--demo .hero__actions,
+.hero--live.hero--b .hero__actions {
+  max-width: 34rem;
+}
+
+.hero--demo .hero__actions .btn,
+.hero--live.hero--b .hero__actions .btn {
+  width: 100%;
+}
+
+.hero--demo .hero__blobs {
+  display: none;
+}
+
+.hero--live.hero--b {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero--live.hero--b .hero__blobs {
+  opacity: 0.35;
+}
+
+.hero--live.hero--b .hero__trust {
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 640px) {
+  .hero-lab__intro {
+    padding: 2rem;
+  }
+
+  .hero--demo .hero__actions .btn,
+  .hero--live.hero--b .hero__actions .btn {
+    width: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero--demo {
+    padding-bottom: 5rem;
+  }
+
+  .hero--a .hero__floating-card,
+  .hero--c .hero__floating-card {
+    position: absolute;
+    right: clamp(1rem, 4vw, 3rem);
+    bottom: clamp(1rem, 4vw, 3rem);
+    margin-top: 0;
+  }
+
+  .hero--b::before {
+    inset: 0 0 0 auto;
+    width: min(58%, 46rem);
+    height: auto;
+    background-position: center;
+  }
+
+  .hero--b::after {
+    inset: 0 0 0 auto;
+    width: min(60%, 50rem);
+    height: auto;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.72) 58%, #ffffff 100%);
+  }
+
+  .hero--b .hero__grid {
+    min-height: 42rem;
+  }
+
+  .hero--b .hero__content {
+    padding-bottom: 7rem;
+  }
+
+  .hero--b .hero__trust {
+    width: min(70rem, calc(100% + 18rem));
+    max-width: none;
+    margin-top: 3rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .hero--b .hero__floating-card {
+    position: absolute;
+    right: clamp(1rem, 4vw, 3rem);
+    bottom: clamp(1rem, 4vw, 3rem);
+    margin-top: 0;
+  }
+}
