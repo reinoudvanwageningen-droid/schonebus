@@ -3,6 +3,8 @@
   var formSubmitSubject = document.getElementById("formsubmit-subject");
   var formSubmitReplyTo = document.getElementById("formsubmit-replyto");
   var submitButton = contactForm.querySelector('button[type="submit"]');
+  var EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  var PHONE_PATTERN = /^(?:\+31|0031|0)[\d\s().-]{8,}$/;
 
   function setFieldError(fieldId, message) {
     var field = document.getElementById(fieldId);
@@ -34,17 +36,47 @@
     var email = document.getElementById("email").value.trim();
 
     if (!email) {
-      setFieldError("email", "Vul je emailadres in.");
-      return false;
+      clearFieldError("email");
+      return true;
     }
 
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    if (!EMAIL_PATTERN.test(email)) {
       setFieldError("email", "Vul een geldig emailadres in.");
       return false;
     }
 
     clearFieldError("email");
     return true;
+  }
+
+  function validPhone() {
+    var phone = document.getElementById("telefoon").value.trim();
+
+    if (!phone) {
+      clearFieldError("telefoon");
+      return true;
+    }
+
+    if (!PHONE_PATTERN.test(phone) || phone.replace(/\D/g, "").length < 10) {
+      setFieldError("telefoon", "Vul een geldig telefoonnummer in.");
+      return false;
+    }
+
+    clearFieldError("telefoon");
+    return true;
+  }
+
+  function validContactMethod() {
+    var email = document.getElementById("email").value.trim();
+    var phone = document.getElementById("telefoon").value.trim();
+
+    if (!email && !phone) {
+      setFieldError("email", "Vul je e-mailadres of telefoonnummer in.");
+      setFieldError("telefoon", "Vul je e-mailadres of telefoonnummer in.");
+      return false;
+    }
+
+    return validEmail() && validPhone();
   }
 
   function focusFirstInvalid() {
@@ -55,20 +87,27 @@
     }
   }
 
-  ["naam", "bedrijfsnaam", "email"].forEach(function (fieldId) {
+  ["naam", "bedrijfsnaam", "email", "telefoon"].forEach(function (fieldId) {
     document.getElementById(fieldId).addEventListener("input", function () {
       clearFieldError(fieldId);
+      if (fieldId === "email" || fieldId === "telefoon") {
+        clearFieldError(fieldId === "email" ? "telefoon" : "email");
+      }
     });
   });
 
   contactForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
+    if (window.schonebusCalculator && typeof window.schonebusCalculator.syncLeadHiddenFields === "function") {
+      window.schonebusCalculator.syncLeadHiddenFields();
+    }
+
     var hasValidName = requiredField("naam", "Vul je naam in.");
     var hasValidCompany = requiredField("bedrijfsnaam", "Vul je bedrijfsnaam in.");
-    var hasValidEmail = validEmail();
+    var hasValidContactMethod = validContactMethod();
 
-    if (!hasValidName || !hasValidCompany || !hasValidEmail) {
+    if (!hasValidName || !hasValidCompany || !hasValidContactMethod) {
       focusFirstInvalid();
       return;
     }
