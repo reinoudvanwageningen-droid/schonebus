@@ -20,7 +20,6 @@
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="hero-variants.css">
 </head>
 <body>
 <a class="skip-link" href="#main-content">Ga direct naar de inhoud</a>
@@ -49,7 +48,7 @@
 
     <button type="button" class="header__burger" id="burger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
       <svg id="burger-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-      <svg id="burger-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:none"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      <svg id="burger-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
     </button>
   </div>
 
@@ -60,7 +59,7 @@
       <a href="#regelingen" class="mobile-menu__link">Regelingen</a>
       <a href="tarieven.html" class="mobile-menu__link">Tarieven</a>
       <a href="#veelgestelde-vragen" class="mobile-menu__link">Veelgestelde vragen</a>
-      <a href="#contact" class="btn btn--primary btn--lg btn--full" style="margin-top: 1rem;">Start aanvraag</a>
+      <a href="#contact" class="btn btn--primary btn--lg btn--full">Start aanvraag</a>
     </nav>
   </div>
 </header>
@@ -112,7 +111,7 @@
 <!-- ════ What We Do ════ -->
 <section class="section whatwedo">
   <div class="container">
-    <div class="text-center">
+    <div class="section-intro section-intro--center">
       <h2 class="section-heading">Voorkom dat fiscaal voordeel blijft liggen.</h2>
       <p class="section-text mt-4">We analyseren je aankoop en specificaties voor maximaal voordeel.</p>
     </div>
@@ -147,25 +146,27 @@
 
 <!-- ════ Subsidy Status ════ -->
 <section id="regelingen" class="section">
-  <div class="container text-center">
-    <h2 class="section-heading">Regelingen in 2026</h2>
-    <p class="section-text mt-4">De check richt zich op de bestelbus zelf, energiebesparende onderdelen, opbouw en een compleet dossier voor je boekhouder of aanvraag.</p>
+  <div class="container">
+    <div class="section-intro section-intro--center">
+      <h2 class="section-heading">Regelingen in 2026</h2>
+      <p class="section-text mt-4">De check richt zich op de bestelbus zelf, energiebesparende onderdelen, opbouw en een compleet dossier voor je boekhouder of aanvraag.</p>
+    </div>
     
-    <div class="whatwedo__grid mt-8 text-left">
-      <div class="card whatwedo__card" style="border-top: 4px solid var(--secondary);">
-        <p style="text-transform: uppercase; font-weight: 700; color: var(--secondary); font-size: 0.85rem; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Meenemen in aangifte</p>
+    <div class="whatwedo__grid">
+      <div class="card whatwedo__card subsidy-card">
+        <p class="subsidy-card__label">Meenemen in aangifte</p>
         <h3 class="section-subheading">KIA</h3>
         <p class="section-text mt-3">Voor de elektrische bestelbus zelf kan KIA fiscaal voordeel opleveren, afhankelijk van je totale jaarinvesteringen en belastingpositie.</p>
       </div>
 
-      <div class="card whatwedo__card" style="border-top: 4px solid var(--accent);">
-        <p style="text-transform: uppercase; font-weight: 700; color: var(--accent); font-size: 0.85rem; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Check op onderdelen</p>
+      <div class="card whatwedo__card subsidy-card subsidy-card--accent">
+        <p class="subsidy-card__label">Check op onderdelen</p>
         <h3 class="section-subheading">EIA</h3>
         <p class="section-text mt-3">EIA kan mogelijk gelden voor energiebesparende voorzieningen op of in de bus, zoals elektrische koeling, zonnepanelen of folie op het voertuig, spiegelcamera's.</p>
       </div>
 
-      <div class="card whatwedo__card" style="border-top: 4px solid var(--primary);">
-        <p style="text-transform: uppercase; font-weight: 700; color: var(--primary); font-size: 0.85rem; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Persoonlijk controleren</p>
+      <div class="card whatwedo__card subsidy-card subsidy-card--dark">
+        <p class="subsidy-card__label">Persoonlijk controleren</p>
         <h3 class="section-subheading">Dossiercheck</h3>
         <p class="section-text mt-3">Wij controleren je opdrachtbevestiging, factuur, leasecontract en technische specificaties. Zo weet je wat je boekhouder of aanvraagdossier nodig heeft.</p>
       </div>
@@ -175,11 +176,13 @@
 
 <!-- ════ How It Works ════ -->
 <section id="hoe-het-werkt" class="section howitworks">
-  <div class="container text-center">
-    <h2 class="section-heading">Hoe het werkt</h2>
-    <p class="section-text mt-4">In 4 eenvoudige stappen geregeld.</p>
+  <div class="container">
+    <div class="section-intro section-intro--center">
+      <h2 class="section-heading">Hoe het werkt</h2>
+      <p class="section-text mt-4">In 4 eenvoudige stappen geregeld.</p>
+    </div>
     
-    <ol class="howitworks__steps text-left">
+    <ol class="howitworks__steps">
       <li>
         <div class="howitworks__step">
           <div class="howitworks__step-num">1</div>
@@ -215,7 +218,7 @@
 <!-- ════ Pricing ════ -->
 <section id="tarieven" class="section pricing">
   <div class="container">
-    <div class="text-center">
+    <div class="section-intro section-intro--center">
       <h2 class="section-heading">Tarieven</h2>
       <p class="section-text mt-4">Heldere en transparante pricing voor onze begeleiding.</p>
     </div>
@@ -285,7 +288,7 @@
       <div class="contact__info-wrap">
         <div>
           <h2 class="section-heading">Laat je persoonlijke check doen</h2>
-          <p class="section-text mt-4">Neem contact met ons op via e-mail of telefoon, of doe direct de voordeelcheck op onze calculator pagina.</p>
+        <p class="section-text mt-4">Neem contact met ons op via e-mail of telefoon, of doe direct de voordeelcheck op onze calculatorpagina.</p>
         </div>
 
         <div class="contact__links">
@@ -299,20 +302,22 @@
           </a>
         </div>
         
-        <div style="display: flex; gap: 1rem; margin-top: 1rem;">
-          <img src="assets/mathijs-vrijbloed-300.jpg" alt="Mathijs Vrijbloed" style="width: 4rem; height: 4rem; border-radius: 50%; object-fit: cover; border: 2px solid white; box-shadow: var(--shadow-md);">
-          <img src="assets/erik-van-der-eng-300.jpg" alt="Erik van der Eng" style="width: 4rem; height: 4rem; border-radius: 50%; object-fit: cover; border: 2px solid white; box-shadow: var(--shadow-md); margin-left: -2rem;">
-          <div style="display: flex; flex-direction: column; justify-content: center; margin-left: 0.5rem;">
-            <p style="font-weight: 700; color: var(--primary);">Je spreekt direct met</p>
-            <p style="color: var(--text-muted); font-size: 0.875rem;">Mathijs of Erik</p>
+        <div class="contact__people">
+          <div class="contact__avatar-stack">
+            <img src="assets/mathijs-vrijbloed-300.jpg" alt="Mathijs Vrijbloed">
+            <img src="assets/erik-van-der-eng-300.jpg" alt="Erik van der Eng">
+          </div>
+          <div>
+            <p class="section-subheading">Je spreekt direct met</p>
+            <p class="section-text">Mathijs of Erik</p>
           </div>
         </div>
       </div>
 
       <div class="card contact__form-card">
         <h2 class="section-subheading">Stel je vraag</h2>
-        <p class="section-text mt-3" style="font-size: 1rem; margin-bottom: 1.5rem;">Wil je liever eerst de rekentool invullen? <a href="calculator.html" style="color: var(--secondary); font-weight: 600; text-decoration: underline;">Ga naar de calculator</a>.</p>
-        <form class="contact__form" id="contact-form" action="https://formsubmit.co/aanvraag@zetgroep.nl" method="post" novalidate style="display: grid; gap: 1rem;">
+        <p class="section-text mt-3">Wil je liever eerst de rekentool invullen? <a href="calculator.html">Ga naar de calculator</a>.</p>
+        <form class="contact__form" id="contact-form" action="https://formsubmit.co/aanvraag@zetgroep.nl" method="post" novalidate>
           <input type="hidden" name="_subject" id="formsubmit-subject" value="Contact via schonebus.nl">
           <input type="hidden" name="_next" value="https://reinoudvanwageningen-droid.github.io/schonebus/bedankt.html">
           <input type="hidden" name="_template" value="table">

@@ -18,7 +18,7 @@
 <a class="skip-link" href="#main-content">Ga direct naar de inhoud</a>
 
 <header class="header" id="site-header">
-  <div class="header__inner">
+  <div class="container header__inner">
     <a href="index.html" class="header__logo">
       <span class="header__logo-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m13 2-2 9h7l-8 11 2-9H5l8-11z"/></svg>
@@ -37,7 +37,7 @@
     </nav>
     <button type="button" class="header__burger" id="burger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
       <svg id="burger-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-      <svg id="burger-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:none"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      <svg id="burger-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
     </button>
   </div>
   <div class="mobile-menu" id="mobile-menu">
@@ -52,14 +52,15 @@
 </header>
 
 <main id="main-content">
-  <div class="page-header" style="background: var(--cloud); padding: 4rem 1rem 2rem; text-align: center;">
+  <div class="page-header text-center">
     <div class="container container--sm">
+      <p class="section-eyebrow">Voordeelcheck</p>
       <h1 class="section-heading">Calculator</h1>
       <p class="section-text mt-3">Check in enkele stappen wat elektrische bestelbussen fiscaal kunnen opleveren.</p>
     </div>
   </div>
 
-  <section id="calculator" class="section calculator" style="padding-top: 2rem;">
+  <section id="calculator" class="section section--tight calculator">
     <div class="container container--sm">
       <div class="card calculator__card check-flow" id="calculator-flow">
         <!-- JS zal dit vullen -->
@@ -68,10 +69,9 @@
     </div>
   </section>
 
-  <!-- We integreren het contactformulier zodat de calculator submit knop werkt -->
   <section id="contact" class="section">
     <div class="container">
-      <div class="card contact__form-card" style="max-width: 672px; margin: 0 auto;">
+      <div class="card contact__form-card calculator-contact">
         <h2 class="section-subheading">Laat je persoonlijke check doen</h2>
         <p class="section-text mt-3">Vul je gegevens in. We controleren je elektrische bestelbus, KIA, EIA-onderdelen en termijnen. Daarna sturen we je vrijblijvend terug wat er nog mogelijk is.</p>
         <form class="contact__form" id="contact-form" action="https://formsubmit.co/aanvraag@zetgroep.nl" method="post" novalidate>
@@ -118,7 +118,7 @@
             <span class="field__label">Aanschafprijs bus</span>
             <span class="field__input-wrap"><input class="field__input" type="text" id="aanschafprijs-bus" name="aanschafprijs_bus"></span>
           </label>
-          <button type="submit" class="btn btn--primary btn--lg" style="margin-top: 1rem; width: 100%;">Stuur mijn voordeelcheck</button>
+          <button type="submit" class="btn btn--primary btn--lg btn--full">Stuur mijn voordeelcheck</button>
         </form>
       </div>
     </div>
@@ -151,5 +151,6 @@
 
 <script src="js/navigation.js"></script>
 <script src="js/calculator.js"></script>
+<script src="js/contact-form.js"></script>
 </body>
 </html>

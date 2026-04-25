@@ -16,8 +16,8 @@
   }
 
   function updateMenuIcons(isOpen) {
-    menuIcon.style.display = isOpen ? "none" : "";
-    closeIcon.style.display = isOpen ? "" : "none";
+    menuIcon.hidden = isOpen;
+    closeIcon.hidden = !isOpen;
   }
 
   function openMenu() {
