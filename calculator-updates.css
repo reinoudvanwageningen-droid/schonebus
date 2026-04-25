@@ -1,8 +1,8 @@
 .calculator__source {
   margin-bottom: 1.5rem;
   border-radius: 18px;
-  border: 1px solid rgb(30 95 216 / 0.22);
-  background: rgb(30 95 216 / 0.08);
+  border: 1px solid rgb(37 99 235 / 0.22);
+  background: rgb(37 99 235 / 0.08);
   padding: 1rem;
 }
 
@@ -10,20 +10,20 @@
 .subsidy__status {
   display: inline-flex;
   border-radius: 9999px;
-  background: var(--midnight);
+  background: var(--primary);
   padding: 0.25rem 0.75rem;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--paper);
+  color: var(--bg-surface);
 }
 
 .calculator__source p {
   margin-top: 0.75rem;
   font-size: 0.9375rem;
   line-height: 1.7;
-  color: var(--ink);
+  color: var(--text-main);
 }
 
 .check-flow {
@@ -45,21 +45,21 @@
   gap: 1rem;
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--mist);
+  color: var(--text-muted);
 }
 
 .check-flow__bar {
   overflow: hidden;
   height: 0.65rem;
   border-radius: 9999px;
-  background: var(--line);
+  background: var(--border);
 }
 
 .check-flow__bar-fill {
   display: block;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(to right, var(--electric), var(--sky));
+  background: linear-gradient(to right, var(--secondary), #60a5fa);
   transition: width 0.25s ease;
 }
 
@@ -72,22 +72,22 @@
 .calculator__intro,
 .check-flow__intro {
   border-radius: 18px;
-  background: rgb(30 95 216 / 0.08);
+  background: rgb(37 99 235 / 0.08);
   padding: 1rem;
   font-size: 0.95rem;
   line-height: 1.7;
-  color: var(--ink);
+  color: var(--text-main);
 }
 
 .check-flow__question {
   font-family: 'Schonebus Display', Arial, sans-serif;
   font-size: clamp(1.5rem, 4vw, 2rem);
   line-height: 1.15;
-  color: var(--midnight);
+  color: var(--primary);
 }
 
 .check-flow__eyebrow {
-  color: var(--electric);
+  color: var(--secondary);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -96,7 +96,7 @@
 
 .check-flow__help,
 .check-flow__note {
-  color: var(--mist);
+  color: var(--text-muted);
   line-height: 1.7;
 }
 
@@ -119,11 +119,11 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 1rem;
-  border: 1px solid var(--line);
+  border: 1px solid var(--border);
   border-radius: 18px;
-  background: var(--paper);
+  background: var(--bg-surface);
   padding: 1rem;
-  color: var(--ink);
+  color: var(--text-main);
   font-family: 'Schonebus Sans', Arial, sans-serif;
   font-size: 1rem;
   font-weight: 600;
@@ -139,26 +139,26 @@
   width: 1.15rem;
   height: 1.15rem;
   margin-top: 0.15rem;
-  border: 2px solid var(--line);
+  border: 2px solid var(--border);
   border-radius: 9999px;
-  background: var(--paper);
+  background: var(--bg-surface);
 }
 
 .check-card:hover {
   transform: translateY(-1px);
-  border-color: var(--electric);
-  box-shadow: var(--shadow-soft);
+  border-color: var(--secondary);
+  box-shadow: var(--shadow-sm);
 }
 
 .check-card--active {
-  border-color: var(--electric);
-  background: rgb(30 95 216 / 0.08);
-  box-shadow: 0 0 0 2px rgb(30 95 216 / 0.16);
+  border-color: var(--secondary);
+  background: rgb(37 99 235 / 0.08);
+  box-shadow: 0 0 0 2px rgb(37 99 235 / 0.16);
 }
 
 .check-card--active::after {
-  border-color: var(--electric);
-  background: radial-gradient(circle at center, var(--electric) 0 42%, transparent 46%);
+  border-color: var(--secondary);
+  background: radial-gradient(circle at center, var(--secondary) 0 42%, transparent 46%);
 }
 
 .check-card--warning {
@@ -180,7 +180,7 @@
 }
 
 .check-card__meta {
-  color: var(--mist);
+  color: var(--text-muted);
   font-size: 0.875rem;
   font-weight: 500;
 }
@@ -190,15 +190,15 @@
   display: grid;
   gap: 1rem;
   border-radius: 18px;
-  border: 1px solid var(--line);
-  background: var(--cloud);
+  border: 1px solid var(--border);
+  background: var(--bg-alt);
   padding: 1rem;
 }
 
 .check-detail h4,
 .check-details__title {
   font-weight: 700;
-  color: var(--midnight);
+  color: var(--primary);
 }
 
 .check-field-grid {
@@ -216,7 +216,7 @@
   display: flex;
   flex-direction: column-reverse;
   gap: 0.75rem;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--border);
   padding-top: 1rem;
 }
 
@@ -256,7 +256,7 @@
 .check-subtitle {
   margin-top: 0.5rem;
   font-family: 'Schonebus Display', Arial, sans-serif;
-  color: var(--midnight);
+  color: var(--primary);
 }
 
 .result-grid {
@@ -276,8 +276,8 @@
 
 .result-total {
   border-radius: 24px;
-  border: 1px solid rgb(30 95 216 / 0.24);
-  background: linear-gradient(135deg, rgb(30 95 216 / 0.12), rgb(111 184 255 / 0.16));
+  border: 1px solid rgb(37 99 235 / 0.24);
+  background: linear-gradient(135deg, rgb(37 99 235 / 0.12), rgb(96 165 250 / 0.16));
   padding: 1.25rem;
 }
 
@@ -287,33 +287,33 @@
   font-size: clamp(2.25rem, 8vw, 3.25rem);
   font-weight: 800;
   line-height: 1;
-  color: var(--midnight);
+  color: var(--primary);
 }
 
 .result-total__subtitle {
   margin-top: 0.75rem;
-  color: var(--mist);
+  color: var(--text-muted);
   line-height: 1.7;
 }
 
 .result-panel {
   border-radius: 22px;
-  border: 1px solid var(--line);
-  background: var(--paper);
+  border: 1px solid var(--border);
+  background: var(--bg-surface);
   padding: 1.15rem;
-  box-shadow: var(--shadow-soft);
+  box-shadow: var(--shadow-sm);
 }
 
 .result-panel h4 {
   margin-top: 0.75rem;
   font-family: 'Schonebus Display', Arial, sans-serif;
   font-size: 1.25rem;
-  color: var(--midnight);
+  color: var(--primary);
 }
 
 .result-panel p {
   margin-top: 1rem;
-  color: var(--mist);
+  color: var(--text-muted);
   line-height: 1.7;
 }
 
@@ -327,16 +327,16 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 0.75rem;
-  border-bottom: 1px solid rgb(217 226 238 / 0.65);
+  border-bottom: 1px solid rgb(226 232 240 / 0.65);
   padding-bottom: 0.35rem;
 }
 
 .result-panel dt {
-  color: var(--mist);
+  color: var(--text-muted);
 }
 
 .result-panel dd {
-  color: var(--ink);
+  color: var(--text-main);
   font-weight: 700;
   text-align: right;
 }
@@ -350,7 +350,7 @@
 }
 
 .result-panel--neutral {
-  border-color: var(--line);
+  border-color: var(--border);
 }
 
 .result-panel__header {
@@ -364,7 +364,7 @@
   font-family: 'Schonebus Display', Arial, sans-serif;
   font-size: 1.25rem;
   line-height: 1.2;
-  color: var(--midnight);
+  color: var(--primary);
 }
 
 .result-panel__amount {
@@ -372,14 +372,14 @@
   font-family: 'Schonebus Display', Arial, sans-serif;
   font-size: 1.75rem;
   font-weight: 700;
-  color: var(--electric);
+  color: var(--secondary);
 }
 
 .result-panel__text,
 .result-panel__details,
 .result-panel__warnings {
   margin-top: 1rem;
-  color: var(--mist);
+  color: var(--text-muted);
   font-size: 0.9375rem;
   line-height: 1.7;
 }
@@ -387,14 +387,14 @@
 .result-panel__details {
   display: grid;
   gap: 0.35rem;
-  color: var(--ink);
+  color: var(--text-main);
 }
 
 .result-panel__details-row {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 0.75rem;
-  border-bottom: 1px solid rgb(217 226 238 / 0.65);
+  border-bottom: 1px solid rgb(226 232 240 / 0.65);
   padding-bottom: 0.35rem;
 }
 
@@ -420,19 +420,19 @@
 }
 
 .result-badge {
-  background: var(--spark);
-  color: var(--midnight);
+  background: var(--accent);
+  color: var(--primary);
 }
 
 .code-badge {
   margin: 0.2rem 0.25rem 0.2rem 0;
-  background: var(--cloud);
-  color: var(--electric);
+  background: var(--bg-alt);
+  color: var(--secondary);
 }
 
 .deadline-badge {
-  background: rgb(30 95 216 / 0.1);
-  color: var(--electric);
+  background: rgb(37 99 235 / 0.1);
+  color: var(--secondary);
 }
 
 .deadline-badge--positive {
@@ -446,17 +446,17 @@
 }
 
 .deadline-badge--neutral {
-  background: var(--cloud);
-  color: var(--mist);
+  background: var(--bg-alt);
+  color: var(--text-muted);
 }
 
 .lead-cta {
   display: grid;
   gap: 1rem;
   border-radius: 24px;
-  background: var(--midnight);
+  background: var(--primary);
   padding: 1.25rem;
-  color: var(--paper);
+  color: var(--bg-surface);
 }
 
 .lead-cta h3 {
@@ -505,7 +505,7 @@
   position: absolute;
   inset: 0 auto 0 0;
   width: 0.35rem;
-  background: var(--line);
+  background: var(--border);
 }
 
 .subsidy__card--active::before {
@@ -513,7 +513,7 @@
 }
 
 .subsidy__card--check::before {
-  background: var(--electric);
+  background: var(--secondary);
 }
 
 .subsidy__card--closed::before {
@@ -525,7 +525,7 @@
 }
 
 .subsidy__card--check .subsidy__status {
-  background: var(--electric);
+  background: var(--secondary);
 }
 
 .subsidy__card--closed .subsidy__status {
@@ -534,7 +534,7 @@
 
 @media (prefers-color-scheme: dark) {
   .calculator__source {
-    background: rgb(111 184 255 / 0.1);
+    background: rgb(96 165 250 / 0.1);
   }
 
   .calculator__source-label,

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#0A1B3D">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#07101F">
+  <meta name="robots" content="index,follow">
+  <title>Calculator | schonebus.nl</title>
+  <meta name="description" content="Check in 2 minuten je mogelijke fiscale voordeel op een elektrische bestelbus.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="calculator-updates.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Ga direct naar de inhoud</a>
+
+<header class="header" id="site-header">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo">
+      <span class="header__logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m13 2-2 9h7l-8 11 2-9H5l8-11z"/></svg>
+      </span>
+      <span class="header__logo-text">
+        <span class="header__logo-name">schonebus.nl</span>
+        <span class="header__logo-sub">onderdeel van ZET Groep</span>
+      </span>
+    </a>
+    <nav class="header__nav">
+      <a href="index.html#hoe-het-werkt" class="header__nav-link">Hoe het werkt</a>
+      <a href="calculator.html" class="header__nav-link" aria-current="page">Calculator</a>
+      <a href="index.html#regelingen" class="header__nav-link">Regelingen</a>
+      <a href="tarieven.html" class="header__nav-link">Tarieven</a>
+      <a href="index.html#contact" class="btn btn--primary btn--md">Contact</a>
+    </nav>
+    <button type="button" class="header__burger" id="burger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+      <svg id="burger-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      <svg id="burger-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:none"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <nav class="mobile-menu__inner">
+      <a href="index.html#hoe-het-werkt" class="mobile-menu__link">Hoe het werkt</a>
+      <a href="calculator.html" class="mobile-menu__link" aria-current="page">Calculator</a>
+      <a href="index.html#regelingen" class="mobile-menu__link">Regelingen</a>
+      <a href="tarieven.html" class="mobile-menu__link">Tarieven</a>
+      <a href="index.html#contact" class="btn btn--primary btn--lg btn--full">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+  <div class="page-header" style="background: var(--cloud); padding: 4rem 1rem 2rem; text-align: center;">
+    <div class="container container--sm">
+      <h1 class="section-heading">Calculator</h1>
+      <p class="section-text mt-3">Check in enkele stappen wat elektrische bestelbussen fiscaal kunnen opleveren.</p>
+    </div>
+  </div>
+
+  <section id="calculator" class="section calculator" style="padding-top: 2rem;">
+    <div class="container container--sm">
+      <div class="card calculator__card check-flow" id="calculator-flow">
+        <!-- JS zal dit vullen -->
+      </div>
+      <p class="calculator__disclaimer">Indicatie op basis van KIA, EIA-aftrekpercentage, IB-tarieven 2026 en vpb-tarieven 2026. Het werkelijke voordeel hangt af van je dossier, fiscale positie en verwerking in je aangifte.</p>
+    </div>
+  </section>
+
+  <!-- We integreren het contactformulier zodat de calculator submit knop werkt -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="card contact__form-card" style="max-width: 672px; margin: 0 auto;">
+        <h2 class="section-subheading">Laat je persoonlijke check doen</h2>
+        <p class="section-text mt-3">Vul je gegevens in. We controleren je elektrische bestelbus, KIA, EIA-onderdelen en termijnen. Daarna sturen we je vrijblijvend terug wat er nog mogelijk is.</p>
+        <form class="contact__form" id="contact-form" action="https://formsubmit.co/aanvraag@zetgroep.nl" method="post" novalidate>
+          <input type="hidden" name="_subject" id="formsubmit-subject" value="Nieuwe aanvraag via schonebus.nl Calculator">
+          <input type="hidden" name="_next" value="https://reinoudvanwageningen-droid.github.io/schonebus/bedankt.html">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="calculator_situation" id="calculator_situation" class="hidden-field">
+          <input type="hidden" name="calculator_bus_type" id="calculator_bus_type" class="hidden-field">
+          <input type="hidden" name="calculator_obligation_timing" id="calculator_obligation_timing" class="hidden-field">
+          <input type="hidden" name="calculator_obligation_date" id="calculator_obligation_date" class="hidden-field">
+          <input type="hidden" name="calculator_bus_price" id="calculator_bus_price" class="hidden-field">
+          <input type="hidden" name="calculator_other_investments" id="calculator_other_investments" class="hidden-field">
+          <input type="hidden" name="calculator_legal_form" id="calculator_legal_form" class="hidden-field">
+          <input type="hidden" name="calculator_tax_rate" id="calculator_tax_rate" class="hidden-field">
+          <input type="hidden" name="calculator_kia_deduction" id="calculator_kia_deduction" class="hidden-field">
+          <input type="hidden" name="calculator_kia_tax_benefit" id="calculator_kia_tax_benefit" class="hidden-field">
+          <input type="hidden" name="calculator_eia_codes" id="calculator_eia_codes" class="hidden-field">
+          <input type="hidden" name="calculator_eia_eligible_investment" id="calculator_eia_eligible_investment" class="hidden-field">
+          <input type="hidden" name="calculator_eia_deduction" id="calculator_eia_deduction" class="hidden-field">
+          <input type="hidden" name="calculator_eia_tax_benefit" id="calculator_eia_tax_benefit" class="hidden-field">
+          <input type="hidden" name="calculator_eia_deadline_status" id="calculator_eia_deadline_status" class="hidden-field">
+          <input type="hidden" name="calculator_eia_warnings" id="calculator_eia_warnings" class="hidden-field">
+          <input type="hidden" name="calculator_total_indicative_benefit" id="calculator_total_indicative_benefit" class="hidden-field">
+          <input type="hidden" name="calculator_result_summary" id="calculator_result_summary" class="hidden-field">
+          <input type="text" name="_honey" class="contact__bot-field" tabindex="-1" autocomplete="off">
+          
+          <label>
+            <span class="field__label">Naam</span>
+            <span class="field__input-wrap"><input class="field__input" type="text" id="naam" name="naam" required></span>
+          </label>
+          <label>
+            <span class="field__label">Bedrijfsnaam</span>
+            <span class="field__input-wrap"><input class="field__input" type="text" id="bedrijfsnaam" name="bedrijfsnaam" required></span>
+          </label>
+          <label>
+            <span class="field__label">Email</span>
+            <span class="field__input-wrap"><input class="field__input" type="email" id="email" name="email" required></span>
+          </label>
+          <label>
+            <span class="field__label">Telefoon</span>
+            <span class="field__input-wrap"><input class="field__input" type="tel" id="telefoon" name="telefoon" required></span>
+          </label>
+          <label>
+            <span class="field__label">Aanschafprijs bus</span>
+            <span class="field__input-wrap"><input class="field__input" type="text" id="aanschafprijs-bus" name="aanschafprijs_bus"></span>
+          </label>
+          <button type="submit" class="btn btn--primary btn--lg" style="margin-top: 1rem; width: 100%;">Stuur mijn voordeelcheck</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand">
+          <span class="footer__brand-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m13 2-2 9h7l-8 11 2-9H5l8-11z"/></svg></span>
+          <span class="footer__brand-name">schonebus.nl</span>
+        </div>
+        <p class="footer__body">schonebus.nl is een initiatief van ZET Groep, specialist in subsidies en advies voor elektrisch transport.</p>
+      </div>
+      <div>
+        <h3 class="footer__heading">Links</h3>
+        <ul class="footer__list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="calculator.html">Calculator</a></li>
+          <li><a href="tarieven.html">Tarieven</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">© 2026 schonebus.nl</div>
+  </div>
+</footer>
+
+<script src="js/navigation.js"></script>
+<script src="js/calculator.js"></script>
+</body>
+</html>

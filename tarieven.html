@@ -3,26 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#0A1B3D">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#07101F">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#101828">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#101828">
   <meta name="robots" content="index,follow,max-image-preview:large">
-  <title>Tarieven, schonebus.nl</title>
+  <title>Tarieven | schonebus.nl</title>
   <meta name="description" content="Bekijk de pakketten Basis en Compleet van schonebus.nl en lees hoe de vergoeding voor je aanvraag werkt.">
-  <link rel="canonical" href="https://reinoudvanwageningen-droid.github.io/schonebus/tarieven.html">
-  <meta property="og:title" content="Tarieven, schonebus.nl">
-  <meta property="og:description" content="Bekijk de pakketten Basis en Compleet van schonebus.nl en lees hoe de vergoeding voor je aanvraag werkt.">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="schonebus.nl">
-  <meta property="og:locale" content="nl_NL">
-  <meta property="og:url" content="https://reinoudvanwageningen-droid.github.io/schonebus/tarieven.html">
-  <meta property="og:image" content="https://reinoudvanwageningen-droid.github.io/schonebus/og.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="schonebus.nl">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Tarieven, schonebus.nl">
-  <meta name="twitter:description" content="Bekijk de pakketten Basis en Compleet van schonebus.nl en lees hoe de vergoeding voor je aanvraag werkt.">
-  <meta name="twitter:image" content="https://reinoudvanwageningen-droid.github.io/schonebus/og.png">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -31,118 +16,124 @@
 <body>
 <a class="skip-link" href="#main-content">Ga direct naar de inhoud</a>
 
-<header class="header header--scrolled">
-  <div class="header__inner">
+<header class="header" id="site-header">
+  <div class="container header__inner">
     <a href="index.html" class="header__logo">
       <span class="header__logo-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m13 2-2 9h7l-8 11 2-9H5l8-11z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-2 9h7l-8 11 2-9H5l8-11z"/></svg>
       </span>
       <span class="header__logo-text">
         <span class="header__logo-name">schonebus.nl</span>
         <span class="header__logo-sub">onderdeel van ZET Groep</span>
       </span>
     </a>
-    <a href="index.html" class="btn btn--secondary btn--md">Terug naar home</a>
+    
+    <nav class="header__nav">
+      <a href="index.html#hoe-het-werkt" class="header__nav-link">Hoe het werkt</a>
+      <a href="calculator.html" class="header__nav-link">Calculator</a>
+      <a href="index.html#regelingen" class="header__nav-link">Regelingen</a>
+      <a href="tarieven.html" class="header__nav-link" aria-current="page">Tarieven</a>
+      <a href="index.html#contact" class="btn btn--primary btn--md">Contact</a>
+    </nav>
+    
+    <button type="button" class="header__burger" id="burger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+      <svg id="burger-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      <svg id="burger-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+  </div>
+  
+  <div class="mobile-menu" id="mobile-menu">
+    <nav class="mobile-menu__inner">
+      <a href="index.html#hoe-het-werkt" class="mobile-menu__link">Hoe het werkt</a>
+      <a href="calculator.html" class="mobile-menu__link">Calculator</a>
+      <a href="index.html#regelingen" class="mobile-menu__link">Regelingen</a>
+      <a href="tarieven.html" class="mobile-menu__link" aria-current="page">Tarieven</a>
+      <a href="index.html#contact" class="btn btn--primary btn--lg btn--full" style="margin-top: 1rem;">Contact</a>
+    </nav>
   </div>
 </header>
 
 <main id="main-content">
-  <section class="section">
+  <div class="page-header text-center" style="background: var(--bg-alt); padding: 5rem 1.5rem;">
     <div class="container container--md">
-      <div class="card pricing-page__hero">
-        <p class="legal-kicker">Tarieven</p>
-        <h1 class="section-heading mt-4">Heldere tarieven voor jouw aanvraag</h1>
-        <p class="section-text mt-5">Je kiest het pakket dat past bij jouw situatie. We werken op no cure, no pay basis: zonder aftrek geen kosten. Vooraf laten we duidelijk zien welk traject we adviseren en welke vergoeding daarbij hoort.</p>
-        <div class="pricing-page__actions">
-          <a href="index.html#contact" class="btn btn--primary btn--md">Bespreek mijn situatie</a>
-          <a href="mailto:aanvraag@zetgroep.nl?subject=Vraag over tarieven schonebus.nl" class="btn btn--secondary btn--md">Mail over tarieven</a>
-        </div>
+      <p style="font-weight: 700; color: var(--secondary); text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.875rem;">Tarieven</p>
+      <h1 class="section-heading mt-4">Heldere tarieven voor jouw aanvraag</h1>
+      <p class="section-text mt-4" style="max-width: 48rem; margin-left: auto; margin-right: auto;">
+        Je kiest het pakket dat past bij jouw situatie. We werken op no cure, no pay basis: zonder aftrek geen kosten. Vooraf laten we duidelijk zien welk traject we adviseren en welke vergoeding daarbij hoort.
+      </p>
+      <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="calculator.html" class="btn btn--primary btn--lg">Doe de voordeelcheck</a>
+        <a href="mailto:aanvraag@zetgroep.nl?subject=Vraag over tarieven schonebus.nl" class="btn btn--secondary btn--lg">Mail over tarieven</a>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section class="section">
-    <div class="container">
-      <div class="pricing-detail__grid">
-        <article class="card pricing-detail__card" id="basis">
-          <p class="legal-kicker">Pakket 1</p>
-          <h2 class="section-heading mt-4">schonebus.nl Basis</h2>
-          <p class="pricing-detail__price">8% van de aftrekpost</p>
-          <p class="section-text mt-4">Voor ondernemers die een duidelijke, rechttoe rechtaan aanvraag voor hun elektrische bestelbus willen laten regelen.</p>
-          <ul class="legal-list mt-5">
-            <li>Check van je opdrachtbevestiging en meldingstermijn</li>
-            <li>Begeleiding bij de aanvraag voor de bus</li>
-            <li>Afstemming zodat je boekhouder verder kan met de aangifte</li>
-            <li>Geen aftrek? Geen kosten</li>
+  <section class="section pricing">
+    <div class="container container--md">
+      <div class="pricing__grid" style="margin-top: 0;">
+        <article class="card pricing__card" id="basis">
+          <p style="font-weight: 700; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.8rem;">Pakket 1</p>
+          <h2 class="section-subheading mt-2">schonebus.nl Basis</h2>
+          <p style="font-size: 2.5rem; font-weight: 800; color: var(--primary); margin-top: 1rem; font-family: 'Schonebus Display', sans-serif;">8%</p>
+          <p style="color: var(--text-muted); font-size: 0.875rem;">van de aftrekpost</p>
+          <p class="section-text mt-4" style="text-align: left; font-size: 1rem;">Voor ondernemers die een duidelijke, rechttoe rechtaan aanvraag voor hun elektrische bestelbus willen laten regelen.</p>
+          <ul style="text-align: left; margin-top: 2rem; list-style: none; display: grid; gap: 0.75rem; color: var(--text-muted);">
+            <li style="display: flex; gap: 0.5rem;"><span style="color: var(--secondary);">✓</span> Check van je opdrachtbevestiging en meldingstermijn</li>
+            <li style="display: flex; gap: 0.5rem;"><span style="color: var(--secondary);">✓</span> Begeleiding bij de aanvraag voor de bus</li>
+            <li style="display: flex; gap: 0.5rem;"><span style="color: var(--secondary);">✓</span> Afstemming zodat je boekhouder verder kan met de aangifte</li>
+            <li style="display: flex; gap: 0.5rem;"><span style="color: var(--secondary);">✓</span> Geen aftrek? Geen kosten</li>
           </ul>
         </article>
 
-        <article class="card pricing-detail__card pricing-detail__card--featured" id="compleet">
+        <article class="card pricing__card pricing__card--featured" id="compleet">
           <span class="pricing__badge">Meest gekozen</span>
-          <h2 class="section-heading mt-4">schonebus.nl Compleet</h2>
-          <p class="pricing-detail__price">10% van de aftrekpost</p>
-          <p class="section-text mt-4">Voor ondernemers die naast de bus ook laadinfra, opbouw of energiebesparende voorzieningen willen laten toetsen.</p>
-          <ul class="legal-list mt-5">
-            <li>Alles uit Basis</li>
-            <li>Extra begeleiding bij KIA, EIA-componenten en SPRILA waar dat past</li>
-            <li>Meedenken over onderdelen zoals laadinfra, koeling en lichtgewicht opbouw</li>
-            <li>Meer afstemming bij een uitgebreider traject</li>
+          <h2 class="section-subheading mt-2">schonebus.nl Compleet</h2>
+          <p style="font-size: 2.5rem; font-weight: 800; color: var(--secondary); margin-top: 1rem; font-family: 'Schonebus Display', sans-serif;">10%</p>
+          <p style="color: var(--text-muted); font-size: 0.875rem;">van de aftrekpost</p>
+          <p class="section-text mt-4" style="text-align: left; font-size: 1rem;">Voor ondernemers die naast de bus ook laadinfra, opbouw of energiebesparende voorzieningen willen laten toetsen.</p>
+          <ul style="text-align: left; margin-top: 2rem; list-style: none; display: grid; gap: 0.75rem; color: var(--text-muted);">
+            <li style="display: flex; gap: 0.5rem;"><span style="color: var(--secondary);">✓</span> Alles uit Basis</li>
+            <li style="display: flex; gap: 0.5rem;"><span style="color: var(--secondary);">✓</span> Extra begeleiding bij KIA, EIA-componenten en SPRILA waar dat past</li>
+            <li style="display: flex; gap: 0.5rem;"><span style="color: var(--secondary);">✓</span> Meedenken over onderdelen zoals laadinfra, koeling en lichtgewicht opbouw</li>
+            <li style="display: flex; gap: 0.5rem;"><span style="color: var(--secondary);">✓</span> Meer afstemming bij een uitgebreider traject</li>
           </ul>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="text-center">
-        <h2 class="section-heading">Hoe de vergoeding werkt</h2>
-        <p class="section-text mt-4">We houden het zo helder mogelijk: eerst checken we je dossier, daarna krijg je een voorstel en weet je vooraf welk pakket logisch is.</p>
-      </div>
+  <section class="section whatwedo">
+    <div class="container text-center">
+      <h2 class="section-heading">Hoe de vergoeding werkt</h2>
+      <p class="section-text mt-4">We houden het zo helder mogelijk: eerst checken we je dossier, daarna krijg je een voorstel en weet je vooraf welk pakket logisch is.</p>
 
-      <div class="pricing-facts__grid">
-        <article class="card pricing-facts__card">
+      <div class="whatwedo__grid mt-8 text-left">
+        <article class="card whatwedo__card">
           <h3 class="section-subheading">Eerst check, dan voorstel</h3>
-          <p class="section-text mt-3">We beoordelen je opdrachtbevestiging, de timing en de regelingen die in 2026 nog op jouw dossier van toepassing zijn.</p>
+          <p class="section-text mt-3" style="font-size: 1rem;">We beoordelen je opdrachtbevestiging, de timing en de regelingen die in 2026 nog op jouw dossier van toepassing zijn.</p>
         </article>
 
-        <article class="card pricing-facts__card">
+        <article class="card whatwedo__card">
           <h3 class="section-subheading">Duidelijk over de grondslag</h3>
-          <p class="section-text mt-3">Onze vergoeding is een percentage van de aftrekpost. In de offerte lichten we toe hoe die voor jouw dossier wordt berekend.</p>
+          <p class="section-text mt-3" style="font-size: 1rem;">Onze vergoeding is een percentage van de aftrekpost. In de offerte lichten we toe hoe die voor jouw dossier wordt berekend.</p>
         </article>
 
-        <article class="card pricing-facts__card">
+        <article class="card whatwedo__card">
           <h3 class="section-subheading">No cure, no pay</h3>
-          <p class="section-text mt-3">Leidt het traject niet tot aftrek, dan betaal je niets. Zo weet je vooraf waar je aan toe bent.</p>
+          <p class="section-text mt-3" style="font-size: 1rem;">Leidt het traject niet tot aftrek, dan betaal je niets. Zo weet je vooraf waar je aan toe bent.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="text-center">
-        <h2 class="section-heading">Welk pakket past vaak het best?</h2>
-      </div>
-
-      <div class="pricing-fit__grid">
-        <article class="card pricing-fit__card">
-          <h3 class="section-subheading">Basis past vaak bij</h3>
-          <p class="section-text mt-3">Eén nieuwe elektrische bestelbus, een duidelijke koopovereenkomst en een aanvraag zonder extra technische onderdelen.</p>
-        </article>
-
-        <article class="card pricing-fit__card">
-          <h3 class="section-subheading">Compleet past vaak bij</h3>
-          <p class="section-text mt-3">Een bus met laadinfra, opbouw of een traject waarbij je KIA en mogelijke RVO-regelingen goed wilt scheiden.</p>
-        </article>
-      </div>
-
-      <div class="card pricing-page__cta">
-        <h2 class="section-heading">Twijfel je tussen Basis en Compleet?</h2>
-        <p class="section-text mt-4">Stuur je opdrachtbevestiging of offerte door. Dan kijken we snel welk pakket het beste past en leggen we de vergoeding vooraf uit.</p>
-        <div class="legal-actions">
-          <a href="index.html#contact" class="btn btn--primary btn--md">Start aanvraag</a>
-          <a href="mailto:aanvraag@zetgroep.nl?subject=Welke tarieven passen bij mijn aanvraag?" class="btn btn--secondary btn--md">Stel een vraag</a>
+  <section class="section" style="padding-top: 0;">
+    <div class="container container--md">
+      <div class="card text-center" style="padding: 3rem; background: var(--bg-alt); border-color: var(--border);">
+        <h2 class="section-subheading">Twijfel je tussen Basis en Compleet?</h2>
+        <p class="section-text mt-4" style="max-width: 40rem; margin-left: auto; margin-right: auto;">Stuur je opdrachtbevestiging of offerte door. Dan kijken we snel welk pakket het beste past en leggen we de vergoeding vooraf uit.</p>
+        <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="calculator.html" class="btn btn--primary btn--lg">Start aanvraag</a>
+          <a href="mailto:aanvraag@zetgroep.nl?subject=Welke tarieven passen bij mijn aanvraag?" class="btn btn--secondary btn--lg">Stel een vraag</a>
         </div>
       </div>
     </div>
@@ -151,19 +142,28 @@
 
 <footer class="footer">
   <div class="container">
-    <div class="footer__brand">
-      <span class="footer__brand-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m13 2-2 9h7l-8 11 2-9H5l8-11z"/></svg>
-      </span>
-      <span class="footer__brand-name">schonebus.nl</span>
-    </div>
-    <p class="footer__body">schonebus.nl is een initiatief van ZET Groep, specialist in subsidies en advies voor elektrisch transport.</p>
-    <div class="legal-actions">
-      <a href="index.html" class="btn btn--secondary btn--md">Terug naar home</a>
-      <a href="index.html#contact" class="btn btn--outline btn--md">Contact</a>
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand">
+          <span class="footer__brand-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-2 9h7l-8 11 2-9H5l8-11z"/></svg>
+          </span>
+          <span class="footer__brand-name">schonebus.nl</span>
+        </div>
+        <p class="footer__body">schonebus.nl is een initiatief van ZET Groep, specialist in subsidies en advies voor elektrisch transport.</p>
+      </div>
+      <div>
+        <h3 class="footer__heading">Links</h3>
+        <ul class="footer__list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="calculator.html">Calculator</a></li>
+          <li><a href="tarieven.html">Tarieven</a></li>
+        </ul>
+      </div>
     </div>
     <div class="footer__bottom">© 2026 schonebus.nl</div>
   </div>
 </footer>
+<script src="js/navigation.js"></script>
 </body>
 </html>
